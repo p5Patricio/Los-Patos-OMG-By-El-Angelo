@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0-alpha1/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/catalogo.css">
     <style>
         .card-container {
             display: none;
@@ -17,20 +17,23 @@
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
         <div class="container">
-            <a class="navbar-brand" href="#">Bienvenido a Agencia de Autos</a>
+            <a class="navbar-brand">Sesión Iniciada</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="./">Catálogo</a>
+                        <a class="nav-link" href="./home.html">Catálogo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./login.html">Login</a>
+                        <a class="nav-link" href="./login.html">Registrar</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contacto</a>
+                        <a class="nav-link" href="./comprar.html">Comprar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="logout-link" class="nav-link" href="../index.html">Cerrar Sesión</a>
                     </li>
                 </ul>
             </div>
@@ -80,7 +83,7 @@
             </div>
             <p class="card-text"><b>Descripción del modelo Audi A8 2023: </b>El Audi A8 2023 es un sedán de lujo que combina elegancia con tecnología avanzada.</p>
             <button class="btn btn-info" onclick="toggleInfo(1)">Información</button>
-            <a href="login.html" class="btn btn-success">Comprar</a>
+            <a href="comprar.html" class="btn btn-success">Comprar</a>
             <div class="info" id="info1" style="display: none;">
                 <!-- Contenido desplegable de información -->
                 <p><br><b>Aquí tienes algunos detalles clave:</b></p>
