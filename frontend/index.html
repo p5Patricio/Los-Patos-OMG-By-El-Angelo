@@ -3,85 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - SuperProyecto con PHP y un monton de cosas</title>
-    <link href="./css/styles.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Home</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0-alpha1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
+    <style>
+        .card-container {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-
-<!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-dark custom-navbar ">
-  <div class="container">
-      <a class="navbar-brand" href="#">Bienvenido a Agencia de Autos</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                  <a class="nav-link" href="./index.html">Inicio</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="./catalogo.html">Catálogo</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Contacto</a>
-              </li>
-          </ul>
-      </div>
-  </div>
-</nav>
-<!-- End Navigation Bar -->
-
-<!-- Section: Design Block -->
-<section class="text-center text-lg-start">
-    <div class="center-container"> <!-- Contenedor para centrar el formulario -->
-        <div class="card mb-3">
-            <div class="row g-0">
+    <div class="main-container">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">Bienvenido a Agencia de Autos</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./catalogoprovisional.html">Catálogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                </ul>
             </div>
-            <div class="row g-0 d-flex align-items-center">
-                <div class="col-lg-8 offset-lg-2">
-                    <div class="card-body py-5 px-md-5">
-                        <form action="../backend/index.php" method="post" id="loginForm">
-                            <input type="hidden" name="accion" value="login">
-                            <!-- Mensaje de bienvenida -->
-                            <div class="mb-4 welcome-message">
-                                <h1 class="mb-3">¡Bienvenidos!</h1>
-                                <p>Por favor inicia sesión para continuar.</p>
-                            </div>                            
-                            <!-- Usuario input -->
-                            <div class="form-outline mb-4">
-                                <input type="text" id="usuario" class="form-control" name="usuario"/>
-                                <label class="form-label" for="usuario">Usuario: </label>
-                            </div>
-                            <!-- Password input -->
-                            <div class="form-outline mb-4">
-                                <input type="password" id="password" class="form-control"  name="password"/>
-                                <label class="form-label" for="password">Password: </label>
-                            </div>
-                            <!-- Submit button -->
-                            <div class="text-center">
-                                <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
-                                <button id="signUp"  type="submit" class="btn btn-warning btn-block mb-4">Sign up</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+        </div>
+    </nav>
+    <!-- End Navigation Bar -->
+
+    <!-- Título del Catálogo -->
+    <div class="container mt-5 catalogo-title-container">
+        <h1 class="text-center catalogo-title">Catálogo de Autos</h1>
+    </div>
+    <!-- End Título del Catálogo -->
+
+    <!-- Contenedor para botones -->
+    <div class="container button-container">
+        <div class="btn-group">
+            <!-- Botones -->
+            <button class="btn btn-primary" onclick="mostrarTarjeta(1)">Audi</button>
+            <button class="btn btn-primary" onclick="mostrarTarjeta(2)">Botón 2</button>
+            <button class="btn btn-primary" onclick="mostrarTarjeta(3)">Botón 3</button>
+            <button class="btn btn-primary" onclick="mostrarTarjeta(4)">Botón 4</button>
+            <button class="btn btn-primary" onclick="mostrarTarjeta(5)">Botón 5</button>
+            <button class="btn btn-primary" onclick="mostrarTarjeta(6)">Botón 6</button>
+            <button class="btn btn-primary" onclick="mostrarTarjeta(7)">Botón 7</button>
+            <button class="btn btn-primary" onclick="mostrarTarjeta(8)">Botón 8</button>
+            <button class="btn btn-primary" onclick="mostrarTarjeta(9)">Botón 9</button>
+            <button class="btn btn-primary" onclick="mostrarTarjeta(10)">Botón 10</button>
+        </div>
+    </div>
+    <!-- End Botones -->
+
+    <!-- Contenedor de las tarjetas de presentación -->
+    <div class="container mt-5">
+        <!-- Tarjetas -->
+        <!-- Tarjetas para el botón 1 -->
+
+        <!-- Tarjetas para el botón 1 -->
+<div class="card-container" id="card1">
+    <div class="card mb-3">
+        <div class="card-body">
+            <h5 class="card-title">Audi A8 2023</h5>
+            <div class="image-container">
+                <img src="./img/audi1.png" class="card-img-top" alt="...">
+                <img src="./img/audi2.png" class="card-img-top" alt="...">
+                <img src="./img/audi3.png" class="card-img-top" alt="...">
+                <!-- Agrega más imágenes aquí -->
+            </div>
+            <p class="card-text"><b>Descripción del modelo Audi A8 2023: </b>El Audi A8 2023 es un sedán de lujo que combina elegancia con tecnología avanzada.</p>
+            <button class="btn btn-info" onclick="toggleInfo(1)">Información</button>
+            <a href="login.html" class="btn btn-success">Comprar</a>
+            <div class="info" id="info1" style="display: none;">
+                <!-- Contenido desplegable de información -->
+                <p><br><b>Aquí tienes algunos detalles clave:</b></p>
+                <p><b>Motorización: </b><br>• A8 55 TFSI Premium quattro: Motor V6 turbo de 3.0 litros con 340 hp y 368 lb-pie de par. 
+                    Caja automática de 8 cambios y tracción Quattro, acompañado de un sistema mild hybrid.<br>
+                    • A8 L 60 TFSI Premium quattro: Motor V8 biturbo de 4.0 litros con 460 hp y 486 lb-pie de par. También cuenta con una caja automática de 8 cambios y tracción Quattro.</p>
+                <p>Color: Blanco</p>
+                <p>Transmisión: Automática</p>
+                <p>Precio: $20,000</p>
             </div>
         </div>
     </div>
-</section>
-<!-- End Section: Design Block -->
+</div>
 
-<!-- Footer -->
-<!-- Footer -->
-<footer class="footer ">
-    <p>© 2024 Agencia de Autos. Todos los derechos reservados.</p>
-</footer>
-<!-- End Footer -->
 
-<!-- End Footer -->
+        <!-- Repite la estructura para los demás botones -->
+        <!-- Tarjetas para el botón 2 -->
+        <div class="card-container" id="card2">
+            <div class="card mb-3">
+                <img src="./img/audi1.png" class="card-img-top" alt="...">
+                <img src="./img/audi1.png" class="card-img-top" alt="...">
+                <img src="./img/audi1.png" class="card-img-top" alt="...">
+                <img src="./img/audi1.png" class="card-img-top" alt="...">
+                <img src="./img/audi1.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Modelo 2</h5>
+                    <p class="card-text">Descripción del modelo 2.</p>
+                    <button class="btn btn-info" onclick="toggleInfo(2)">Información</button>
+                    <a href="comprar.html" class="btn btn-success">Comprar</a>
+                    <div class="info" id="info2" style="display: none;">
+                        <!-- Contenido desplegable de información -->
+                        <p>Color: Negro</p>
+                        <p>Transmisión: Manual</p>
+                        <p>Precio: $15,000</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Agrega más tarjetas según sea necesario -->
+        </div>
 
-<script src="./js/app.js"></script>
+        <!-- Repite la estructura para los demás botones -->
+        <!-- Agrega más contenedores de tarjetas según sea necesario -->
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer fixed-bottom">
+        <p>© 2024 Agencia de Autos. Todos los derechos reservados.</p>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Script para mostrar y ocultar información -->
+    <script src="./js/catalogo.js"></script>
+    </div>
 </body>
 </html>
