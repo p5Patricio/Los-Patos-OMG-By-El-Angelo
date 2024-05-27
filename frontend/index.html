@@ -40,7 +40,8 @@
 
     <!-- Título del Catálogo -->
     <div class="container mt-5 catalogo-title-container">
-        <h1 class="text-center catalogo-title">Catálogo de Autos</h1>
+        <h1 class="text-center catalogo-title mb-4">Catálogo de Autos</h1> <!-- Se agregó la clase "mb-4" para agregar espacio en la parte inferior -->
+        <p class="text-center">Haz clic en la marca de autos que más te interese</p> <!-- Mensaje añadido -->
     </div>
     <!-- End Título del Catálogo -->
 
@@ -49,80 +50,578 @@
         <div class="btn-group">
             <!-- Botones -->
             <button class="btn btn-primary" onclick="mostrarTarjeta(1)">Audi</button>
-            <button class="btn btn-primary" onclick="mostrarTarjeta(2)">Botón 2</button>
-            <button class="btn btn-primary" onclick="mostrarTarjeta(3)">Botón 3</button>
-            <button class="btn btn-primary" onclick="mostrarTarjeta(4)">Botón 4</button>
-            <button class="btn btn-primary" onclick="mostrarTarjeta(5)">Botón 5</button>
-            <button class="btn btn-primary" onclick="mostrarTarjeta(6)">Botón 6</button>
-            <button class="btn btn-primary" onclick="mostrarTarjeta(7)">Botón 7</button>
-            <button class="btn btn-primary" onclick="mostrarTarjeta(8)">Botón 8</button>
-            <button class="btn btn-primary" onclick="mostrarTarjeta(9)">Botón 9</button>
-            <button class="btn btn-primary" onclick="mostrarTarjeta(10)">Botón 10</button>
+            <button class="btn btn-primary" onclick="mostrarTarjeta(2)">Honda</button>
+            <button class="btn btn-primary" onclick="mostrarTarjeta(3)">Mitsubishi</button>
+            <button class="btn btn-primary" onclick="mostrarTarjeta(4)">Nissan</button>
+            <button class="btn btn-primary" onclick="mostrarTarjeta(5)">Toyota</button>
         </div>
     </div>
     <!-- End Botones -->
 
     <!-- Contenedor de las tarjetas de presentación -->
     <div class="container mt-5">
-        <!-- Tarjetas -->
-        <!-- Tarjetas para el botón 1 -->
-
-        <!-- Tarjetas para el botón 1 -->
+        <!-- Tarjetas para el botón 1 (AUDI) -->
 <div class="card-container" id="card1">
+    <!-- Audi A8 -->
     <div class="card mb-3">
         <div class="card-body">
             <h5 class="card-title">Audi A8 2023</h5>
             <div class="image-container">
                 <img src="./img/audi1.png" class="card-img-top" alt="...">
-                <img src="./img/audi2.png" class="card-img-top" alt="...">
-                <img src="./img/audi3.png" class="card-img-top" alt="...">
-                <!-- Agrega más imágenes aquí -->
             </div>
-            <p class="card-text"><b>Descripción del modelo Audi A8 2023: </b>El Audi A8 2023 es un sedán de lujo que combina elegancia con tecnología avanzada.</p>
-            <button class="btn btn-info" onclick="toggleInfo(1)">Información</button>
+            <p class="card-text"><b>Descripción del modelo Audi A8 2023: </b>El Audi A8 2023 Conocido por su elegancia y tecnología de vanguardia, el Audi A8 ofrece un interior lujoso, un rendimiento excepcional y una amplia gama de características avanzadas..</p>
+            <button class="btn btn-primary" onclick="toggleInfo(1)">Información</button>
             <a href="login.html" class="btn btn-success">Comprar</a>
             <div class="info" id="info1" style="display: none;">
                 <!-- Contenido desplegable de información -->
                 <p><br><b>Aquí tienes algunos detalles clave:</b></p>
-                <p><b>Motorización: </b><br>• A8 55 TFSI Premium quattro: Motor V6 turbo de 3.0 litros con 340 hp y 368 lb-pie de par. 
-                    Caja automática de 8 cambios y tracción Quattro, acompañado de un sistema mild hybrid.<br>
-                    • A8 L 60 TFSI Premium quattro: Motor V8 biturbo de 4.0 litros con 460 hp y 486 lb-pie de par. También cuenta con una caja automática de 8 cambios y tracción Quattro.</p>
-                <p>Color: Blanco</p>
-                <p>Transmisión: Automática</p>
-                <p>Precio: $20,000</p>
+                <p><b>Motorización: </b><br>• <b>Motor W12:</b> En las versiones de gama alta del Audi A8, se puede encontrar un motor W12. Estos motores son menos comunes pero ofrecen un rendimiento excepcionalmente suave y poderoso. La disposición de los cilindros en forma de "W" permite un diseño más compacto y una entrega de potencia suave y lineal.<br>
+                    • <b>Motor híbrido enchufable (PHEV): </b> Audi también ofrece opciones de motorización híbrida enchufable para el A8 en versiones más recientes. Estos sistemas combinan un motor de combustión interna con un motor eléctrico y una batería recargable. Ofrecen una mayor eficiencia de combustible y la capacidad de conducir en modo completamente eléctrico durante distancias cortas, lo que también contribuye a una conducción más limpia y respetuosa con el medio ambiente.</p>
+                <p><b>Color:</b> Negro</p>
+                <p><b>Transmisión:</b> Automática</p>
+                <p><b>Precio:</b> $2,169,900.00 M/N</p>
             </div>
         </div>
     </div>
+
+     <!-- Audi Q8 -->
+    <div class="card mb-3">
+        <div class="card-body">
+            <h5 class="card-title">Audi Q8 2019</h5>
+            <div class="image-container">
+                <img src="./img/audi2.png" class="card-img-top" alt="...">
+            </div>
+            <p class="card-text"><b>Descripción del modelo Audi Q8 2019: </b>Este SUV de lujo combina un diseño impresionante con un interior espacioso y repleto de tecnología. Ofrece un rendimiento potente y una experiencia de conducción confortable.</p>
+            <button class="btn btn-primary" onclick="toggleInfo(2)">Información</button>
+            <a href="login.html" class="btn btn-success">Comprar</a>
+            <div class="info" id="info2" style="display: none;">
+                <!-- Contenido desplegable de información -->
+                <p><br><b>Aquí tienes algunos detalles clave:</b></p>
+                <p><b>Motorización: </b><br>• <b>Motor V6 de gasolina:</b> Es probable que el Audi Q8 2019 esté equipado con un motor V6 de gasolina con desplazamientos que van desde aproximadamente 3.0 a 4.0 litros. Estos motores ofrecen un buen equilibrio entre potencia y eficiencia.<br>
+                    • <b>Motor híbrido enchufable (PHEV):</b> Audi también puede ofrecer una versión híbrida enchufable del Q8 para el año 2019. Este tipo de motor combina un motor de combustión interna con un motor eléctrico para ofrecer una mayor eficiencia y la posibilidad de conducir en modo totalmente eléctrico durante distancias cortas.</p>
+                <p><b>Color:</b> Blanco</p>
+                <p><b>Transmisión:</b> Automática</p>
+                <p><b>Precio:</b> $1,499,900.00 M/N</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audi RS7 -->
+    <div class="card mb-3">
+        <div class="card-body">
+            <h5 class="card-title">Audi RS7 2022</h5>
+            <div class="image-container">
+                <img src="./img/audi3.png" class="card-img-top" alt="...">
+            </div>
+            <p class="card-text"><b>Descripción del modelo Audi RS7 2022: </b>Este sedán deportivo de alta gama ofrece un rendimiento extraordinario gracias a su potente motor y su diseño aerodinámico. El interior está lleno de comodidades y tecnología de última generación.</p>
+            <button class="btn btn-primary" onclick="toggleInfo(3)">Información</button>
+            <a href="login.html" class="btn btn-success">Comprar</a>
+            <div class="info" id="info3" style="display: none;">
+                <!-- Contenido desplegable de información -->
+                <p><br><b>Aquí tienes algunos detalles clave:</b></p>
+                <p><b>Motorización: </b><br>• <b>Motor V8 de doble turbocompresor:</b> Este motor es una opción común para el RS7 y es conocido por su potencia y rendimiento. Es un motor de gasolina V8 con doble turbocompresor que puede ofrecer una potencia superior a los 500 caballos de fuerza (HP). Proporciona una aceleración rápida y una experiencia de conducción emocionante.<br>
+                    • <b>Motor híbrido enchufable (PHEV):</b> Esta opción combina un motor de combustión interna con un motor eléctrico, lo que proporciona una mayor eficiencia de combustible y la capacidad de conducir en modo totalmente eléctrico durante distancias cortas. Este tipo de motorización también puede ofrecer un alto rendimiento combinado con una eficiencia mejorada.</p>
+                <p><b>Color:</b> Rojo</p>
+                <p><b>Transmisión:</b> Automática</p>
+                <p><b>Precio:</b> $3,079,900.00 M/N</p>
+            </div>
+        </div>
+    </div>
+
+        <!-- Audi R8 -->
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Audi R8 2019</h5>
+                <div class="image-container">
+                    <img src="./img/audi4.png" class="card-img-top" alt="...">
+                </div>
+                <p class="card-text"><b>Descripción del modelo Audi R8 2019: </b>Un superdeportivo de élite, el Audi R8 es conocido por su diseño espectacular y su rendimiento excepcional. Cada detalle está cuidadosamente diseñado para ofrecer una experiencia de conducción emocionante.</p>
+                <button class="btn btn-primary" onclick="toggleInfo(4)">Información</button>
+                <a href="login.html" class="btn btn-success">Comprar</a>
+                <div class="info" id="info4" style="display: none;">
+                    <!-- Contenido desplegable de información -->
+                    <p><br><b>Aquí tienes algunos detalles clave:</b></p>
+                    <p><b>Motorización: </b><br>• <b>Motor V10 de aspiración natural: </b> Este es uno de los motores más emblemáticos del Audi R8. Es un motor de gasolina V10 que no está sobrealimentado, lo que significa que no tiene turbocompresores. Esta configuración proporciona una respuesta instantánea del acelerador y un sonido distintivo del motor. La potencia de estos motores puede variar según la generación del R8, pero generalmente ofrecen más de 500 caballos de fuerza (HP), con versiones más recientes que superan los 600 HP.<br>
+                        • <b>Motor V10 Plus: </b> Esta es una variante de alto rendimiento del motor V10 de aspiración natural. En versiones como el Audi R8 V10 Plus o R8 Performance, este motor puede ofrecer una potencia aún mayor y un rendimiento optimizado para un mayor disfrute en pista.</p>
+                    <p><b>Color:</b> Azul</p>
+                    <p><b>Transmisión:</b> Automática</p>
+                    <p><b>Precio:</b> $3,074,900.00 M/N</p>
+                </div>
+            </div>
+        </div>
+
+         <!-- Audi S8: -->
+         <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Audi S8 2022:</h5>
+                <div class="image-container">
+                    <img src="./img/audi5.png" class="card-img-top" alt="...">
+                </div>
+                <p class="card-text"><b>Descripción del modelo Audi S8 2022: </b>El Audi S8 combina lujo y deportividad en un sedán de alto rendimiento. Con un potente motor, un interior lujoso y una amplia variedad de características de alta tecnología, el S8 ofrece una experiencia de conducción excepcional.</p>
+                <button class="btn btn-primary" onclick="toggleInfo(5)">Información</button>
+                <a href="login.html" class="btn btn-success">Comprar</a>
+                <div class="info" id="info5" style="display: none;">
+                    <!-- Contenido desplegable de información -->
+                    <p><br><b>Aquí tienes algunos detalles clave:</b></p>
+                    <p><b>Motorización: </b><br>• <b>Motor V8 Biturbo de 4.0 litros: </b> Este motor ofrece un equilibrio impresionante entre potencia y refinamiento. Gracias a la tecnología de doble turbocompresión, este motor puede producir una potencia abundante, ofreciendo una experiencia de conducción emocionante y dinámica.<br>
+                        • <b>Motor V8 TFSI de 4.0 litros:</b> Otra opción de motorización para el Audi S8 es el motor V8 TFSI. También con una capacidad de 4.0 litros, este motor es turboalimentado y proporciona una potencia excepcional junto con una respuesta rápida del acelerador, asegurando una experiencia de conducción deportiva y emocionante.</p>
+                    <p><b>Color:</b> Blanco</p>
+                    <p><b>Transmisión:</b> Automática</p>
+                    <p><b>Precio:</b> $3,388,900.00 M/N</p>
+                </div>
+            </div>
+        </div>
 </div>
 
-
-        <!-- Repite la estructura para los demás botones -->
-        <!-- Tarjetas para el botón 2 -->
+        <!-- Tarjetas para el botón 2 (HONDA) -->
         <div class="card-container" id="card2">
+            <!-- Honda Civic Type R  -->
             <div class="card mb-3">
-                <img src="./img/audi1.png" class="card-img-top" alt="...">
-                <img src="./img/audi1.png" class="card-img-top" alt="...">
-                <img src="./img/audi1.png" class="card-img-top" alt="...">
-                <img src="./img/audi1.png" class="card-img-top" alt="...">
-                <img src="./img/audi1.png" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Modelo 2</h5>
-                    <p class="card-text">Descripción del modelo 2.</p>
-                    <button class="btn btn-info" onclick="toggleInfo(2)">Información</button>
-                    <a href="comprar.html" class="btn btn-success">Comprar</a>
-                    <div class="info" id="info2" style="display: none;">
+                    <h5 class="card-title">Honda Civic Type R 2023</h5>
+                    <div class="image-container">
+                        <img src="./img/honda1.png" class="card-img-top" alt="...">
+                    </div>
+                    <p class="card-text"><b>Descripción del modelo Honda Civic Type R 2023: </b>Esta versión deportiva del Civic ofrece un rendimiento emocionante y un diseño aerodinámico. Equipado con un potente motor turboalimentado, suspensión deportiva y mejoras aerodinámicas, el Civic Type R 2023 es ideal para los entusiastas de la conducción deportiva.</p>
+                    <button class="btn btn-primary" onclick="toggleInfo(6)">Información</button>
+                    <a href="login.html" class="btn btn-success">Comprar</a>
+                    <div class="info" id="info6" style="display: none;">
                         <!-- Contenido desplegable de información -->
-                        <p>Color: Negro</p>
-                        <p>Transmisión: Manual</p>
-                        <p>Precio: $15,000</p>
+                        <p><br><b>Aquí tienes algunos detalles clave:</b></p>
+                        <p><b>Motorización: </b><br>• <b>Motor K20C1:</b> Este es el motor utilizado en la última generación del Civic Type R. Es un motor turboalimentado de cuatro cilindros en línea de 2.0 litros. En el Civic Type R, este motor ha sido capaz de producir alrededor de 306 caballos de fuerza y 295 lb-pie de torque.<br>
+                            • <b>Motor K20A:</b> Este motor fue utilizado en generaciones anteriores del Civic Type R, como en el modelo FD2 japonés y el modelo EP3 europeo. También es un motor de cuatro cilindros en línea de 2.0 litros, pero su potencia y torque específicos pueden variar según la versión del motor y la configuración del vehículo.</p>
+                        <p><b>Color:</b> Rojo</p>
+                        <p><b>Transmisión:</b> Manual</p>
+                        <p><b>Precio:</b> $550,900.00 M/N</p>
                     </div>
                 </div>
             </div>
-            <!-- Agrega más tarjetas según sea necesario -->
+        
+             <!-- 2019 Honda Insight LX -->
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Honda Insight LX 2019</h5>
+                    <div class="image-container">
+                        <img src="./img/honda2.png" class="card-img-top" alt="...">
+                    </div>
+                    <p class="card-text"><b>Descripción del modelo Honda Insight LX 2019: </b>El Honda Insight LX 2019 ofrece una combinación excepcional de eficiencia, comodidad y tecnología, lo que lo convierte en una opción atractiva para aquellos que buscan un vehículo híbrido confiable y económico.</p>
+                    <button class="btn btn-primary" onclick="toggleInfo(7)">Información</button>
+                    <a href="login.html" class="btn btn-success">Comprar</a>
+                    <div class="info" id="info7" style="display: none;">
+                        <!-- Contenido desplegable de información -->
+                        <p><br><b>Aquí tienes algunos detalles clave:</b></p>
+                        <p><b>Motorización: </b><br>• <b>Motor de gasolina de 1.5 litros:</b> Este motor es parte del sistema híbrido del Honda Insight. Funciona en conjunto con un motor eléctrico para proporcionar potencia y propulsión al vehículo. Este motor de gasolina es conocido por su eficiencia y capacidad para optimizar el consumo de combustible en combinación con el motor eléctrico.<br>
+                            • <b>Motor eléctrico:</b> El Honda Insight también está equipado con un motor eléctrico que trabaja en conjunto con el motor de gasolina para impulsar el vehículo. Este motor eléctrico se alimenta de la batería del sistema híbrido y proporciona potencia adicional al acelerar y al mantener velocidades de crucero, lo que contribuye a una mayor eficiencia de combustible en condiciones de conducción variadas.</p>
+                        <p><b>Color:</b> Azul</p>
+                        <p><b>Transmisión:</b> Automática</p>
+                        <p><b>Precio:</b> $525,900.00 M/N</p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Honda Odyssey 2024 -->
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Honda Odyssey 2024</h5>
+                    <div class="image-container">
+                        <img src="./img/honda3.png" class="card-img-top" alt="...">
+                    </div>
+                    <p class="card-text"><b>Descripción del modelo Honda Odyssey 2024: </b>La minivan Odyssey 2024 se destaca por su amplio espacio interior y sus características familiares amigables. Con capacidad para hasta ocho pasajeros, este vehículo ofrece comodidad y conveniencia para viajes largos o cortos. Además, está equipado con tecnología de entretenimiento y seguridad para satisfacer las necesidades de toda la familia.</p>
+                    <button class="btn btn-primary" onclick="toggleInfo(8)">Información</button>
+                    <a href="login.html" class="btn btn-success">Comprar</a>
+                    <div class="info" id="info8" style="display: none;">
+                        <!-- Contenido desplegable de información -->
+                        <p><br><b>Aquí tienes algunos detalles clave:</b></p>
+                        <p><b>Motorización: </b><br>• <b>Motor V6 de 3.5 litros:</b> Esta es una opción de motorización confiable y potente que se encuentra comúnmente en la Honda Odyssey. Este motor V6 proporciona una buena combinación de potencia y eficiencia para propulsar la minivan con facilidad, brindando un rendimiento sólido tanto en carretera como en ciudad.<br>
+                            • <b>Motor híbrido:</b> Es posible que el Honda Odyssey 2024 también esté disponible con una opción de motorización híbrida. Este tipo de motor combina un motor de gasolina con uno o más motores eléctricos para mejorar la eficiencia de combustible y reducir las emisiones. La combinación de un motor eléctrico y un motor de gasolina proporciona una potencia adicional cuando es necesario, mientras se maximiza la economía de combustible durante la conducción.</p>
+                        <p><b>Color:</b> Negro</p>
+                        <p><b>Transmisión:</b> Automática</p>
+                        <p><b>Precio:</b> $1,124,900.00 M/N</p>
+                    </div>
+                </div>
+            </div>
+        
+                <!-- Honda Pilot 2023 -->
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Honda Pilot 2023</h5>
+                        <div class="image-container">
+                            <img src="./img/honda4.png" class="card-img-top" alt="...">
+                        </div>
+                        <p class="card-text"><b>Descripción del modelo Honda Pilot 2023: </b>El SUV de tamaño mediano Honda Pilot 2023 combina un diseño robusto con un interior refinado y funcional. Con capacidad para hasta ocho ocupantes, ofrece un amplio espacio para pasajeros y carga. Además, cuenta con tracción en las cuatro ruedas disponible y una variedad de características de seguridad activa.</p>
+                        <button class="btn btn-primary" onclick="toggleInfo(9)">Información</button>
+                        <a href="login.html" class="btn btn-success">Comprar</a>
+                        <div class="info" id="info9" style="display: none;">
+                            <!-- Contenido desplegable de información -->
+                            <p><br><b>Aquí tienes algunos detalles clave:</b></p>
+                            <p><b>Motorización: </b><br>• <b>Motor V6 de 3.5 litros: </b> Este es un motor confiable y potente que se encuentra comúnmente en el Honda Pilot. Este motor V6 ofrece una combinación sólida de potencia y eficiencia, lo que permite una conducción suave y con buena respuesta tanto en carretera como en ciudad.<br>
+                                • <b>Motor híbrido: </b> Es posible que el Honda Pilot 2023 también esté disponible con una opción de motorización híbrida. Este tipo de motor combina un motor de gasolina con uno o más motores eléctricos para mejorar la eficiencia de combustible y reducir las emisiones. La tecnología híbrida puede proporcionar una potencia adicional cuando es necesario, al tiempo que maximiza la economía de combustible durante la conducción.</p>
+                            <p><b>Color:</b> Blanco</p>
+                            <p><b>Transmisión:</b> Automática</p>
+                            <p><b>Precio:</b> $1,159,900.00 M/N</p>
+                        </div>
+                    </div>
+                </div>
+        
+                 <!-- Honda CR-V Hybrid 2024:  -->
+                 <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Honda CR-V Hybrid 2024:</h5>
+                        <div class="image-container">
+                            <img src="./img/honda5.png" class="card-img-top" alt="...">
+                        </div>
+                        <p class="card-text"><b>Descripción del modelo Honda CR-V Hybrid 2024: </b>La versión híbrida del popular SUV compacto, el CR-V Hybrid 2024, ofrece una combinación de eficiencia de combustible y rendimiento. Equipado con un sistema híbrido avanzado, este modelo proporciona una conducción suave y silenciosa, junto con características de seguridad y tecnología de vanguardia. Su diseño versátil lo hace ideal para aventuras urbanas y viajes familiares.</p>
+                        <button class="btn btn-primary" onclick="toggleInfo(10)">Información</button>
+                        <a href="login.html" class="btn btn-success">Comprar</a>
+                        <div class="info" id="info10" style="display: none;">
+                            <!-- Contenido desplegable de información -->
+                            <p><br><b>Aquí tienes algunos detalles clave:</b></p>
+                            <p><b>Motorización: </b><br>• <b>Motor de gasolina de 2.0 litros con asistencia híbrida: </b> Este motor es parte del sistema híbrido del Honda CR-V Hybrid 2024. Junto con el sistema híbrido, que incluye uno o más motores eléctricos, proporciona una combinación de potencia y eficiencia. El motor de gasolina trabaja en conjunto con los motores eléctricos para proporcionar una respuesta ágil y una buena economía de combustible.<br>
+                                • <b>Motor eléctrico:</b> El Honda CR-V Hybrid 2024 también está equipado con uno o más motores eléctricos como parte de su sistema híbrido. Estos motores eléctricos complementan al motor de gasolina para proporcionar una potencia adicional cuando es necesario, así como para mejorar la eficiencia de combustible en condiciones de conducción variadas.</p>
+                            <p><b>Color:</b> Negro</p>
+                            <p><b>Transmisión:</b> Automática</p>
+                            <p><b>Precio:</b> $929,900.00 M/N</p>
+                        </div>
+                    </div>
+                </div>
         </div>
+                <!-- Tarjetas para el botón 3 (Mitsubishi) -->
+                <div class="card-container" id="card3">
+                    <!-- Mitsubishi Outlander 2023  -->
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Mitsubishi Outlander 2023</h5>
+                            <div class="image-container">
+                                <img src="./img/mitsubishi1.png" class="card-img-top" alt="...">
+                            </div>
+                            <p class="card-text"><b>Descripción del modelo Honda Civic Type R 2023: </b>El Outlander es un SUV compacto que combina versatilidad, eficiencia y tecnología. Ofrece espacio para hasta siete pasajeros en su interior bien diseñado y cuenta con tracción en las cuatro ruedas disponible para enfrentar diferentes condiciones de manejo. Su diseño exterior robusto y moderno se complementa con características de seguridad avanzadas y sistemas de infoentretenimiento de última generación.</p>
+                            <button class="btn btn-primary" onclick="toggleInfo(11)">Información</button>
+                            <a href="login.html" class="btn btn-success">Comprar</a>
+                            <div class="info" id="info11" style="display: none;">
+                                <!-- Contenido desplegable de información -->
+                                <p><br><b>Aquí tienes algunos detalles clave:</b></p>
+                                <p><b>Motorización: </b><br>• <b>Motor 2.4 litros de cuatro cilindros:</b> Este motor es una opción popular en el Outlander. Ofrece una combinación de rendimiento y eficiencia, proporcionando una potencia adecuada para la mayoría de las necesidades de conducción diaria.<br>
+                                    • <b>Motor 3.0 litros V6:</b> Esta es una opción más potente que se encuentra en algunas versiones de gama alta del Outlander. Con seis cilindros en V, proporciona una potencia adicional para aquellos que desean un rendimiento más robusto y una capacidad de remolque mejorada.</p>
+                                <p><b>Color:</b> Gris-Plata</p>
+                                <p><b>Transmisión:</b> Automatica</p>
+                                <p><b>Precio:</b> $999,000.00 M/N</p>
+                            </div>
+                        </div>
+                    </div>
+                
+                     <!-- Mitsubishi Eclipse Cross 2022 -->
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Mitsubishi Eclipse Cross 2022 </h5>
+                            <div class="image-container">
+                                <img src="./img/mitsubishi2.png" class="card-img-top" alt="...">
+                            </div>
+                            <p class="card-text"><b>Descripción del modelo Mitsubishi Eclipse Cross 2022: </b>El Eclipse Cross es un SUV crossover que se destaca por su estilo audaz y deportivo. Equipado con un motor eficiente y disponible en tracción delantera o tracción en las cuatro ruedas, ofrece una conducción ágil y divertida. Su cabina está diseñada para brindar comodidad y tecnología avanzada, con características como un sistema de infoentretenimiento intuitivo y asistentes de seguridad activa.</p>
+                            <button class="btn btn-primary" onclick="toggleInfo(12)">Información</button>
+                            <a href="login.html" class="btn btn-success">Comprar</a>
+                            <div class="info" id="info12" style="display: none;">
+                                <!-- Contenido desplegable de información -->
+                                <p><br><b>Aquí tienes algunos detalles clave:</b></p>
+                                <p><b>Motorización: </b><br>• <b>Motor de gasolina de 1.5 litros:</b> Este es un motor pequeño pero potente que ofrece un equilibrio entre rendimiento y eficiencia. Con la tecnología de turbocompresión, este motor puede proporcionar una buena potencia para el tamaño del Eclipse Cross, lo que permite una experiencia de conducción ágil y divertida.<br>
+                                    • <b>Motor 2.4 litros de cuatro cilindros:</b> Algunas versiones del Eclipse Cross pueden estar equipadas con un motor más grande de 2.4 litros. Este motor ofrece una potencia adicional en comparación con el motor turbo de 1.5 litros, lo que puede ser beneficioso para aquellos que desean un rendimiento más robusto y una capacidad de remolque mejorada.</p>
+                                <p><b>Color:</b> Rojo</p>
+                                <p><b>Transmisión:</b> Automática</p>
+                                <p><b>Precio:</b> $434,500.00 M/N</p>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- Mitsubishi L2002024 -->
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Mitsubishi L200 2024</h5>
+                            <div class="image-container">
+                                <img src="./img/mitsubishi3.png" class="card-img-top" alt="...">
+                            </div>
+                            <p class="card-text"><b>Descripción del modelo Mitsubishi L200 2024: </b>La L200 es una pickup mediana reconocida por su resistencia y capacidad de carga. Diseñada para enfrentar trabajos difíciles y aventuras off-road, cuenta con tracción en las cuatro ruedas y un chasis robusto. Su interior combina comodidad con funcionalidad, ofreciendo espacio para pasajeros y una variedad de características de conveniencia.</p>
+                            <button class="btn btn-primary" onclick="toggleInfo(13)">Información</button>
+                            <a href="login.html" class="btn btn-success">Comprar</a>
+                            <div class="info" id="info13" style="display: none;">
+                                <!-- Contenido desplegable de información -->
+                                <p><br><b>Aquí tienes algunos detalles clave:</b></p>
+                                <p><b>Motorización: </b><br>• <b>Motor diésel de 2.4 litros de cuatro cilindros:</b> Este tipo de motor es común en la L200 y ofrece un equilibrio entre potencia y eficiencia. Los motores diésel son populares en vehículos utilitarios como la L200 debido a su capacidad para entregar un alto torque a bajas revoluciones, lo que es útil para el remolque y la conducción fuera de carretera.<br>
+                                    • <b>Motor de gasolina de 2.0 litros de cuatro cilindros:</b> Algunas versiones de la L200 podrían estar equipadas con un motor de gasolina para aquellos que prefieren esta opción. Este motor proporcionaría una potencia adecuada para la conducción en carretera y en ciudad, aunque generalmente con un consumo de combustible ligeramente mayor en comparación con los motores diésel.</p>
+                                <p><b>Color:</b> Azul</p>
+                                <p><b>Transmisión:</b> Automática</p>
+                                <p><b>Precio:</b> $573,100.00 M/N</p>
+                            </div>
+                        </div>
+                    </div>
+                
+                        <!-- Mitsubishi Mirage 2020 -->
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Mitsubishi Mirage 2020</h5>
+                                <div class="image-container">
+                                    <img src="./img/mitsubishi4.png" class="card-img-top" alt="...">
+                                </div>
+                                <p class="card-text"><b>Descripción del modelo Mitsubishi Mirage 2020: </b>El Mirage es un automóvil compacto que se destaca por su eficiencia de combustible y su bajo costo de propiedad. Ideal para la conducción urbana, ofrece un manejo ágil y un interior cómodo con espacio suficiente para pasajeros y carga. Su diseño aerodinámico contribuye a su excelente economía de combustible, lo que lo convierte en una opción popular para aquellos que buscan un vehículo económico y confiable.</p>
+                                <button class="btn btn-primary" onclick="toggleInfo(14)">Información</button>
+                                <a href="login.html" class="btn btn-success">Comprar</a>
+                                <div class="info" id="info14" style="display: none;">
+                                    <!-- Contenido desplegable de información -->
+                                    <p><br><b>Aquí tienes algunos detalles clave:</b></p>
+                                    <p><b>Motorización: </b><br>• <b>Motor de gasolina de 1.2 litros de tres cilindros: </b> Este motor es popular en el Mirage y ofrece una combinación de eficiencia de combustible y rendimiento adecuado para la conducción urbana. Con tres cilindros, este motor es compacto y ligero, lo que contribuye a la economía de combustible del vehículo.<br>
+                                        • <b>Motor de gasolina de 1.0 litro de tres cilindros: </b> Dependiendo del mercado, el Mirage también podría estar disponible con un motor de 1.0 litro de tres cilindros. Este motor más pequeño también ofrece una buena eficiencia de combustible y es ideal para la conducción en entornos urbanos.</p>
+                                    <p><b>Color:</b> Azul</p>
+                                    <p><b>Transmisión:</b> Automática</p>
+                                    <p><b>Precio:</b> $283,300.00 M/N</p>
+                                </div>
+                            </div>
+                        </div>
+                
+                         <!-- Mitsubishi Pajero Sport 2024:  -->
+                         <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Mitsubishi Pajero Sport 2024</h5>
+                                <div class="image-container">
+                                    <img src="./img/mitsubishi5.png" class="card-img-top" alt="...">
+                                </div>
+                                <p class="card-text"><b>Descripción del modelo Mitsubishi Pajero Sport 2024: </b>El Pajero Sport es un SUV todoterreno que combina capacidades off-road con comodidad en carretera. Con su sistema de tracción en las cuatro ruedas Super Select II, puede enfrentar una variedad de terrenos con confianza. Su interior espacioso y bien equipado ofrece comodidad para toda la familia, mientras que su robusta construcción y características de seguridad avanzadas garantizan un viaje seguro en cualquier aventura.</p>
+                                <button class="btn btn-primary" onclick="toggleInfo(15)">Información</button>
+                                <a href="login.html" class="btn btn-success">Comprar</a>
+                                <div class="info" id="info15" style="display: none;">
+                                    <!-- Contenido desplegable de información -->
+                                    <p><br><b>Aquí tienes algunos detalles clave:</b></p>
+                                    <p><b>Motorización: </b><br>• <b>Motor diésel de 2.4 litros de cuatro cilindros: </b> Este es un motor diésel comúnmente encontrado en el Pajero Sport. Ofrece un buen equilibrio entre potencia y eficiencia de combustible, lo que lo hace adecuado para el remolque y la conducción fuera de carretera. Con su alto torque a bajas revoluciones, es capaz de enfrentar terrenos difíciles con facilidad.<br>
+                                        • <b>Motor de gasolina de 3.0 litros V6:</b> Algunas versiones del Pajero Sport pueden estar equipadas con un motor de gasolina V6 de 3.0 litros. Este motor proporciona una potencia más robusta en comparación con el motor diésel, lo que puede ser preferido por aquellos que buscan un rendimiento más dinámico y una conducción más suave en carretera.</p>
+                                    <p><b>Color:</b> Café</p>
+                                    <p><b>Transmisión:</b> Automática</p>
+                                    <p><b>Precio:</b> $948,900.00 M/N</p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                    <!-- Tarjetas para el botón 4 (Nissan) -->
+                    <div class="card-container" id="card4">
+                        <!-- Nissan Kicks:  -->
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Nissan Kicks 2020</h5>
+                                <div class="image-container">
+                                    <img src="./img/nissan1.png" class="card-img-top" alt="...">
+                                </div>
+                                <p class="card-text"><b>Descripción del modelo Nissan Kicks 2020: </b>La Nissan Kicks es un SUV subcompacto que destaca por su estilo llamativo, su eficiencia de combustible y su amplio espacio interior. Diseñada para la ciudad, la Kicks ofrece un manejo ágil y una excelente visibilidad gracias a su posición elevada de manejo. Con un diseño moderno y aerodinámico, la Kicks cuenta con características de tecnología avanzada, como pantalla táctil, sistemas de seguridad inteligentes y opciones de conectividad. Es una opción popular para aquellos que buscan un vehículo urbano versátil y lleno de estilo.</p>
+                                <button class="btn btn-primary" onclick="toggleInfo(16)">Información</button>
+                                <a href="login.html" class="btn btn-success">Comprar</a>
+                                <div class="info" id="info16" style="display: none;">
+                                    <!-- Contenido desplegable de información -->
+                                    <p><br><b>Aquí tienes algunos detalles clave:</b></p>
+                                    <p><b>Motorización: </b><br>• <b>Motor de gasolina de 1.6 litros de cuatro cilindros:</b> Este motor es el más comúnmente disponible en la Nissan Kicks. Es un motor eficiente y económico que proporciona una potencia adecuada para la conducción diaria en entornos urbanos y suburbanos. Ofrece un equilibrio entre rendimiento y economía de combustible.<br>
+                                        • <b>Motor híbrido (en algunos mercados):</b> Dependiendo del mercado, la Nissan Kicks también puede estar disponible con un tren motriz híbrido, que combina un motor de gasolina con un motor eléctrico. Este sistema híbrido proporciona una mayor eficiencia de combustible y puede ofrecer un rendimiento mejorado en términos de potencia y torque gracias a la combinación de ambas fuentes de energía.</p>
+                                    <p><b>Color:</b> Guinda</p>
+                                    <p><b>Transmisión:</b> Automatica</p>
+                                    <p><b>Precio:</b> $397,300.00 M/N</p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                         <!-- Nissan Maxima 2018 -->
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Nissan Maxima 2018</h5>
+                                <div class="image-container">
+                                    <img src="./img/nissan2.png" class="card-img-top" alt="...">
+                                </div>
+                                <p class="card-text"><b>Descripción del modelo Nissan Maxima 2018: </b>El Nissan Maxima es un sedán de lujo que combina elegancia, rendimiento y comodidad. Con un diseño exterior audaz y una cabina lujosa y bien equipada, el Maxima ofrece un manejo ágil y potente gracias a su motor V6. Además, está equipado con tecnología avanzada y características de seguridad para una experiencia de conducción premium.</p>
+                                <button class="btn btn-primary" onclick="toggleInfo(17)">Información</button>
+                                <a href="login.html" class="btn btn-success">Comprar</a>
+                                <div class="info" id="info17" style="display: none;">
+                                    <!-- Contenido desplegable de información -->
+                                    <p><br><b>Aquí tienes algunos detalles clave:</b></p>
+                                    <p><b>Motorización: </b><br>• <b>Motor V6 de 3.5 litros: </b> Esta es una de las opciones de motorización más comunes en el Nissan Maxima. Es un motor potente que ofrece una combinación de rendimiento emocionante y eficiencia de combustible. Con una potencia sólida y un par motor impresionante, este motor proporciona una experiencia de conducción dinámica y ágil.<br>
+                                        • <b>Motor turboalimentado (opción disponible en algunas versiones):</b> En algunas versiones específicas y años del Nissan Maxima, se ofrece un motor turboalimentado. Este motor suele ser más pequeño en desplazamiento, pero gracias a la sobrealimentación, puede proporcionar una potencia comparable o incluso superior al motor V6 estándar. Esto puede resultar en una respuesta más rápida del acelerador y una experiencia de conducción más emocionante.</p>
+                                    <p><b>Color:</b> Negro</p>
+                                    <p><b>Transmisión:</b> Automática</p>
+                                    <p><b>Precio:</b> $328,134.00 M/N</p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- Nissan Armada 2021 -->
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Nissan Armada 2021</h5>
+                                <div class="image-container">
+                                    <img src="./img/nissan3.png" class="card-img-top" alt="...">
+                                </div>
+                                <p class="card-text"><b>Descripción del modelo Nissan Armada 2021: </b>El Nissan Armada es un SUV de lujo de tamaño completo que ofrece un amplio espacio, confort y capacidad para toda la familia. Con un diseño imponente y una cabina espaciosa y lujosa, el Armada está equipado con características premium y tecnología de última generación. Además, su potente motor V8 proporciona una potencia excepcional y capacidades de remolque impresionantes.</p>
+                                <button class="btn btn-primary" onclick="toggleInfo(18)">Información</button>
+                                <a href="login.html" class="btn btn-success">Comprar</a>
+                                <div class="info" id="info18" style="display: none;">
+                                    <!-- Contenido desplegable de información -->
+                                    <p><br><b>Aquí tienes algunos detalles clave:</b></p>
+                                    <p><b>Motorización: </b><br>• <b>Motor V8 de 5.6 litros (gasolina):</b> Esta es la opción de motorización estándar para el Nissan Armada. Es un motor potente que ofrece una gran cantidad de torque y potencia, ideal para remolcar y para una conducción robusta y sin esfuerzo. Este motor es capaz de proporcionar un rendimiento sólido tanto en carretera como fuera de ella.<br>
+                                        • <b>Motor diésel V8 (en mercados selectos): </b>  En algunos mercados selectos, el Nissan Armada también puede estar disponible con un motor diésel V8. Este motor ofrece un excelente torque y una eficiencia de combustible mejorada en comparación con el motor de gasolina estándar. Es una opción popular para aquellos que buscan una combinación de potencia y eficiencia en un SUV de tamaño completo.</p>
+                                    <p><b>Color:</b> Negro</p>
+                                    <p><b>Transmisión:</b> Automática</p>
+                                    <p><b>Precio:</b> $186,999.00 M/N</p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                            <!-- Nissan Murano: 2022 -->
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Nissan Murano: 2022</h5>
+                                    <div class="image-container">
+                                        <img src="./img/nissan4.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <p class="card-text"><b>Descripción del modelo Nissan Murano 2022: </b>El Nissan Murano es un SUV crossover de lujo que combina estilo, confort y rendimiento. Con un diseño exterior distintivo y una cabina elegante y bien equipada, el Murano ofrece una conducción suave y refinada. Además, está repleto de características de alta tecnología y sistemas de seguridad avanzados para brindar una experiencia de conducción de lujo.</p>
+                                    <button class="btn btn-primary" onclick="toggleInfo(19)">Información</button>
+                                    <a href="login.html" class="btn btn-success">Comprar</a>
+                                    <div class="info" id="info19" style="display: none;">
+                                        <!-- Contenido desplegable de información -->
+                                        <p><br><b>Aquí tienes algunos detalles clave:</b></p>
+                                        <p><b>Motorización: </b><br>• <b>Motor V6 de 3.5 litros: </b> Esta es la opción de motorización más común para el Nissan Murano. Es un motor confiable que ofrece una potencia adecuada para la mayoría de las situaciones de manejo. Con una buena combinación de rendimiento y eficiencia de combustible, este motor proporciona una experiencia de conducción suave y satisfactoria.<br>
+                                            • <b>Motor híbrido (en algunos mercados): </b> En algunos mercados específicos, el Nissan Murano puede estar disponible con un sistema de propulsión híbrido que combina un motor de gasolina con uno o más motores eléctricos. Este sistema híbrido proporciona una mayor eficiencia de combustible y puede ofrecer un rendimiento mejorado en términos de potencia y torque gracias a la combinación de ambas fuentes de energía.</p>
+                                        <p><b>Color:</b> Blanco</p>
+                                        <p><b>Transmisión:</b> Automática</p>
+                                        <p><b>Precio:</b> $429,000.00 M/N</p>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                             <!-- Nissan Sentra 2023:  -->
+                             <div class="card mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Nissan Sentra 2023</h5>
+                                    <div class="image-container">
+                                        <img src="./img/nissan5.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <p class="card-text"><b>Descripción del modelo Nissan Sentra 2023: </b>El Nissan Sentra es un sedán compacto conocido por su excelente economía de combustible, manejo ágil y diseño atractivo. Con un interior bien construido y características de seguridad sólidas, el Sentra es una opción popular para aquellos que buscan un vehículo confiable y eficiente para el día a día.</p>
+                                    <button class="btn btn-primary" onclick="toggleInfo(20)">Información</button>
+                                    <a href="login.html" class="btn btn-success">Comprar</a>
+                                    <div class="info" id="info20" style="display: none;">
+                                        <!-- Contenido desplegable de información -->
+                                        <p><br><b>Aquí tienes algunos detalles clave:</b></p>
+                                        <p><b>Motorización: </b><br>• <b>Motor de gasolina de 1.8 litros de cuatro cilindros:  </b> Este es el motor estándar que se encuentra en muchas versiones del Nissan Sentra. Es un motor eficiente que proporciona una buena combinación de potencia y economía de combustible para el uso diario.<br>
+                                            • <b>Motor turboalimentado (opción disponible en algunas versiones):</b> En algunas versiones específicas y años del Nissan Sentra, se ofrece un motor turboalimentado. Este motor es más potente que el motor estándar y puede proporcionar una experiencia de conducción más emocionante con una respuesta rápida del acelerador y una mayor potencia en general.</p>
+                                        <p><b>Color:</b> Azul</p>
+                                        <p><b>Transmisión:</b> Automática</p>
+                                        <p><b>Precio:</b> $390,900.00 M/N</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
 
-        <!-- Repite la estructura para los demás botones -->
-        <!-- Agrega más contenedores de tarjetas según sea necesario -->
+                    <!-- Tarjetas para el botón 5 (Toyota) -->
+                    <div class="card-container" id="card5">
+                        <!-- Toyota Camry 2022:  -->
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Toyota Camry 2022</h5>
+                                <div class="image-container">
+                                    <img src="./img/toyota1.png" class="card-img-top" alt="...">
+                                </div>
+                                <p class="card-text"><b>Descripción del modelo Toyota Camry 2022: </b>El Camry es un sedán mediano que destaca por su confiabilidad, eficiencia de combustible y comodidad. Es conocido por su suave manejo y amplio espacio interior, lo que lo convierte en una opción popular para familias y conductores que valoran la comodidad.</p>
+                                <button class="btn btn-primary" onclick="toggleInfo(21)">Información</button>
+                                <a href="login.html" class="btn btn-success">Comprar</a>
+                                <div class="info" id="info21" style="display: none;">
+                                    <!-- Contenido desplegable de información -->
+                                    <p><br><b>Aquí tienes algunos detalles clave:</b></p>
+                                    <p><b>Motorización: </b><br>• <b>Motor de 4 cilindros en línea:</b> Muchas versiones del Camry están equipadas con un motor de 4 cilindros en línea. Estos motores suelen tener una capacidad de alrededor de 2.5 litros y ofrecen una combinación de rendimiento decente y eficiencia de combustible. Pueden generar potencias que van desde aproximadamente 180 hasta 206 caballos de fuerza, dependiendo de la generación y la configuración específica del motor.<br>
+                                        • <b>Motor V6: </b> Algunas versiones más premium del Camry están disponibles con un motor V6. Estos motores suelen tener una capacidad de alrededor de 3.5 litros y ofrecen un rendimiento más potente en comparación con los motores de 4 cilindros. Pueden generar potencias que van desde aproximadamente 270 hasta 301 caballos de fuerza, dependiendo de la generación y la configuración específica del motor.</p>
+                                    <p><b>Color:</b> Blanco</p>
+                                    <p><b>Transmisión:</b> Automatica</p>
+                                    <p><b>Precio:</b> $481,200.00 M/N</p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                         <!-- Toyota Corolla 2023 -->
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Toyota Corolla 2023 </h5>
+                                <div class="image-container">
+                                    <img src="./img/toyota2.png" class="card-img-top" alt="...">
+                                </div>
+                                <p class="card-text"><b>Descripción del modelo Toyota Corolla 2023: </b> El Corolla es uno de los automóviles más vendidos en el mundo. Es un compacto económico conocido por su durabilidad, bajo costo de mantenimiento y eficiencia de combustible. Además, ofrece una conducción suave y cómoda, así como una buena cantidad de características de seguridad.</p>
+                                <button class="btn btn-primary" onclick="toggleInfo(22)">Información</button>
+                                <a href="login.html" class="btn btn-success">Comprar</a>
+                                <div class="info" id="info22" style="display: none;">
+                                    <!-- Contenido desplegable de información -->
+                                    <p><br><b>Aquí tienes algunos detalles clave:</b></p>
+                                    <p><b>Motorización: </b><br>• <b>Motor de 4 cilindros en línea: </b> Muchas versiones del Toyota Corolla están equipadas con un motor de 4 cilindros en línea. Estos motores suelen tener una capacidad de alrededor de 1.8 a 2.0 litros, dependiendo del año y la configuración específica del modelo. Pueden generar potencias que van desde aproximadamente 120 hasta 169 caballos de fuerza, ofreciendo un equilibrio entre rendimiento y eficiencia de combustible.<br>
+                                        • <b>Motor Híbrido:</b> Desde hace algunos años, el Toyota Corolla también está disponible con un sistema de propulsión híbrido. Este sistema combina un motor de gasolina con un motor eléctrico, ofreciendo una excelente eficiencia de combustible y bajas emisiones. La potencia total combinada del sistema híbrido puede variar según la generación del Corolla, pero suele estar en el rango de 120 a 180 caballos de fuerza, proporcionando un rendimiento sólido junto con una notable economía de combustible.</p>
+                                    <p><b>Color:</b> Gris-Plata</p>
+                                    <p><b>Transmisión:</b> Automática</p>
+                                    <p><b>Precio:</b> $399,900.00 M/N</p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- Toyota RAV4 2023 -->
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Toyota RAV4 2023</h5>
+                                <div class="image-container">
+                                    <img src="./img/toyota3.png" class="card-img-top" alt="...">
+                                </div>
+                                <p class="card-text"><b>Descripción del modelo Toyota RAV4 2023: </b>El RAV4 es un SUV compacto que combina la versatilidad y la eficiencia de combustible con una sólida capacidad todoterreno. Es popular por su amplio espacio interior, buena economía de combustible y una gama de características de seguridad y tecnología avanzadas.</p>
+                                <button class="btn btn-primary" onclick="toggleInfo(23)">Información</button>
+                                <a href="login.html" class="btn btn-success">Comprar</a>
+                                <div class="info" id="info23" style="display: none;">
+                                    <!-- Contenido desplegable de información -->
+                                    <p><br><b>Aquí tienes algunos detalles clave:</b></p>
+                                    <p><b>Motorización: </b><br>• <b>Motor de 4 cilindros en línea:</b> Muchas versiones del Toyota RAV4 están equipadas con un motor de 4 cilindros en línea. Estos motores suelen tener una capacidad de alrededor de 2.5 litros y ofrecen una combinación de rendimiento y eficiencia de combustible. Pueden generar potencias que van desde aproximadamente 176 hasta 203 caballos de fuerza, dependiendo de la generación y la configuración específica del motor.<br>
+                                        • <b>Motor Híbrido:</b>  El RAV4 también está disponible con un sistema de propulsión híbrido. Este sistema combina un motor de gasolina con uno o más motores eléctricos, proporcionando una excelente eficiencia de combustible y reduciendo las emisiones. La potencia total combinada del sistema híbrido puede variar, pero suele estar en el rango de 219 a 302 caballos de fuerza, ofreciendo un rendimiento sólido junto con una notable economía de combustible.</p>
+                                    <p><b>Color:</b> Guinda</p>
+                                    <p><b>Transmisión:</b> Automática</p>
+                                    <p><b>Precio:</b> $704,400.00 M/N</p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                            <!-- Toyota Highlander 2024 -->
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Toyota Highlander 2024</h5>
+                                    <div class="image-container">
+                                        <img src="./img/toyota4.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <p class="card-text"><b>Descripción del modelo Toyota Highlander 2024: </b>El Highlander es un SUV mediano que se destaca por su confortable conducción, amplio espacio para pasajeros y cargamento, y una amplia variedad de características de seguridad y tecnología. Es una excelente opción para familias que necesitan espacio adicional y versatilidad.</p>
+                                    <button class="btn btn-primary" onclick="toggleInfo(24)">Información</button>
+                                    <a href="login.html" class="btn btn-success">Comprar</a>
+                                    <div class="info" id="info24" style="display: none;">
+                                        <!-- Contenido desplegable de información -->
+                                        <p><br><b>Aquí tienes algunos detalles clave:</b></p>
+                                        <p><b>Motorización: </b><br>• <b>Motor V6: </b> Muchas versiones del Toyota Highlander están equipadas con un motor V6. Estos motores suelen tener una capacidad de alrededor de 3.5 litros y ofrecen un rendimiento potente y suave. Pueden generar potencias que van desde aproximadamente 270 hasta 295 caballos de fuerza, dependiendo de la generación y la configuración específica del motor.<br>
+                                            • <b>Motor Híbrido: </b> El Highlander también está disponible con un sistema de propulsión híbrido. Este sistema combina un motor de gasolina con uno o más motores eléctricos, ofreciendo una excelente eficiencia de combustible y una respuesta dinámica. La potencia total combinada del sistema híbrido puede variar, pero suele estar en el rango de 243 a 306 caballos de fuerza, proporcionando un rendimiento sólido junto con una notable economía de combustible.</p>
+                                        <p><b>Color:</b> Verde</p>
+                                        <p><b>Transmisión:</b> Automática</p>
+                                        <p><b>Precio:</b> $960,900.00 M/N</p>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                             <!-- Toyota Tacoma 2022:  -->
+                             <div class="card mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Toyota Tacoma 2022</h5>
+                                    <div class="image-container">
+                                        <img src="./img/toyota5.png" class="card-img-top" alt="...">
+                                    </div>
+                                    <p class="card-text"><b>Descripción del modelo Toyota Tacoma 2022: </b>La Tacoma es una camioneta pickup compacta conocida por su durabilidad, capacidad todoterreno y fiabilidad. Es popular entre los conductores que necesitan un vehículo resistente para aventuras al aire libre o trabajos pesados, pero también ofrece comodidad y tecnología moderna en su interior.</p>
+                                    <button class="btn btn-primary" onclick="toggleInfo(25)">Información</button>
+                                    <a href="login.html" class="btn btn-success">Comprar</a>
+                                    <div class="info" id="info25" style="display: none;">
+                                        <!-- Contenido desplegable de información -->
+                                        <p><br><b>Aquí tienes algunos detalles clave:</b></p>
+                                        <p><b>Motorización: </b><br>• <b>Motor de gasolina V6: </b> La Tacoma suele estar equipada con un motor V6 de gasolina. Estos motores suelen tener una capacidad de alrededor de 3.5 litros y ofrecen un buen equilibrio entre potencia y eficiencia. Pueden generar potencias que van desde aproximadamente 278 hasta 278 caballos de fuerza, dependiendo de la generación y la configuración específica del motor.<br>
+                                            • <b>Motor de gasolina de 4 cilindros:</b> Algunas versiones de la Tacoma están disponibles con un motor de gasolina de 4 cilindros en línea. Estos motores suelen tener una capacidad de alrededor de 2.7 litros y ofrecen una potencia adecuada para un rendimiento sólido en carretera y todoterreno. Pueden generar potencias que van desde aproximadamente 159 hasta 159 caballos de fuerza, dependiendo de la generación y la configuración específica del motor.</p>
+                                        <p><b>Color:</b> Negro</p>
+                                        <p><b>Transmisión:</b> Automática</p>
+                                        <p><b>Precio:</b> $969,900.00 M/N</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
     </div>
     
     <!-- Footer -->
