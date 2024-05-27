@@ -15,7 +15,7 @@ loginForm.addEventListener('submit', (event) => {
   .then ((res) => {
     console.log('@@ res =>', res)
     if (res.message === 'Inicio Satisfactorio') {
-      window.location.href = '../frontend/comprar/home.html'
+      window.location.href = '../frontend/home.html'
   }
   })
   .catch((err) => {
@@ -52,3 +52,14 @@ if (signUpButton) {
     window.location.href = './registrar.html'
   })
 }
+
+document.getElementById('logout-link').addEventListener('click', function(event) {
+  // Evita que el enlace redireccione automáticamente
+  event.preventDefault();
+
+  // Muestra un mensaje de confirmación
+  if (confirm('¿Estás seguro de que quieres cerrar sesión?')) {
+      // Si el usuario confirma, redirige a la página de inicio de sesión
+      window.location.href = this.getAttribute('href');
+  }
+});
