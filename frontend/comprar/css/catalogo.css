@@ -66,12 +66,15 @@
     z-index: 0; /* Asegura que los botones seleccionados estén por debajo de la barra de navegación */
 }
 
+
+/* Estilos para las imágenes dentro de las tarjetas */
 /* Estilos para las imágenes dentro de las tarjetas */
 .card-img-top {
-    width: 300px !important; /* Ajusta el ancho de las imágenes */
-    height: auto !important; /* Ajusta la altura automáticamente para mantener la relación de aspecto */
-    object-fit: cover !important; /* Cubre el contenedor manteniendo la relación de aspecto */
-    border-radius: 10px !important; /* Añade bordes redondeados a las imágenes */
+    width: 200px; /* Establece un ancho fijo para las imágenes */
+    height: 200px; /* Establece una altura fija para las imágenes */
+    object-fit: contain; /* Ajusta la imagen dentro del contenedor manteniendo su relación de aspecto */
+    border-radius: 10px; /* Añade bordes redondeados a las imágenes */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Agrega una sombra suave a las imágenes */
 }
 
 /* Estilos para el contenedor de imágenes */
@@ -81,6 +84,10 @@
     align-items: center; /* Centra verticalmente las imágenes */
 }
 
-.card-body p {
-    text-align: justify;
+/* Estilos para cada imagen dentro del contenedor */
+.image-container img {
+    width: 150px; /* Ajusta el tamaño de las imágenes según sea necesario */
+    height: auto; /* Ajusta la altura automáticamente para mantener la relación de aspecto */
+    margin: 0 15px; /* Ajusta el margen horizontal entre las imágenes */
 }
+
