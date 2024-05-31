@@ -11,6 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result->num_rows == 1) {
         session_start();
         $_SESSION['usuario'] = $usuario;
+        $_SESSION['id'] = $row["id"];
         header("Location: ../../frontend/index.php");
     } else {
         echo "Usuario o contraseña incorrectos.";
