@@ -23,7 +23,8 @@ CREATE TABLE IF NOT EXISTS carros (
     precio DECIMAL(10, 2) NOT NULL,
     descripcion TEXT NOT NULL,
     caracteristicas TEXT NOT NULL,
-    disponibilidad BOOLEAN DEFAULT TRUE NOT NULL
+    disponibilidad BOOLEAN DEFAULT TRUE NOT NULL,
+    imagen VARCHAR(255)
 );
 
 -- Tabla de ventas
@@ -70,32 +71,31 @@ CREATE TABLE IF NOT EXISTS pagos_rentas (
     CONSTRAINT fk_pago_renta FOREIGN KEY (renta_id) REFERENCES rentas(renta_id)
 );
 
-INSERT INTO `carros` (`marca`, `modelo`, `anio`, `precio`, `descripcion`, `caracteristicas`, `disponibilidad`) VALUES
-('Toyota', 'Supra', 1999, '60000.00', '¡Prepárate para desatar todo el poder del Toyota Supra!', 'Motor turbo, Tracción trasera, Asientos deportivos de cuero.', 0),
-('Toyota', 'RAV4', 2017, '28000.00', 'SUV compacto versátil para aventuras urbanas y todoterreno.', 'Tracción en las cuatro ruedas, Techo corredizo, Cámara de visión trasera.', 1),
-('Toyota', 'Corolla', 2021, '23000.00', 'El sedán compacto más vendido del mundo.', 'Sistema de seguridad Toyota Sense, Pantalla táctil de 8 pulgadas, Control de crucero adaptativo.', 1),
-('Toyota', 'Tacoma', 2020, '32000.00', 'Pickup mediana resistente y confiable.', 'Cabina doble, Sistema de tracción activa, Cámara de vista trasera.', 1),
-('Toyota', 'Sienna', 2016, '34000.00', 'Minivan espaciosa y repleta de características de seguridad.', 'Asientos para 8 pasajeros, Puertas corredizas automáticas, Sistema de sonido JBL.', 1),
-('Honda', 'HR-V', 2020, '26000.00', 'SUV subcompacto con eficiencia de combustible y espacio.', 'Asientos traseros Magic Seat, Pantalla táctil de 7 pulgadas, Honda LaneWatch.', 1),
-('Honda', 'Ridgeline', 2019, '33000.00', 'Pickup mediana con características innovadoras.', 'Cama de carga de doble acción, Sistema de audio premium, Tracción en todas las ruedas.', 1),
-('Honda', 'Fit', 2018, '23000.00', 'Hatchback subcompacto con asientos mágicos.', 'Asientos traseros Magic Seat, Sistema de infoentretenimiento de pantalla táctil de 7 pulgadas, Control de clima automático.', 1),
-('Honda', 'Insight', 2019, '27000.00', 'Híbrido compacto con estilo y eficiencia.', 'Sistema Honda Sensing, Asientos de cuero, Pantalla táctil de 8 pulgadas.', 1),
-('Honda', 'Civic Type R', 2020, '35000.00', 'Deportivo compacto con rendimiento de pista.', 'Motor turbo de 4 cilindros, Suspensión ajustable, Asientos deportivos tipo cubo.', 1),
-('Nissan', 'Skyline R34', 1999, '4900000.00', '¡Experimenta la emoción pura de la velocidad con el legendario Nissan Skyline R34!', 'Motor twin-turbo RB26DETT, Tracción en las cuatro ruedas, Sistema de suspensión ajustable.', 1),
-('Nissan', '370Z', 2020, '33000.00', 'El coupé deportivo legendario que ofrece emociones puras de manejo.', 'Motor V6 de 3.7 litros, Transmisión manual de 6 velocidades, Sistema de frenos deportivos.', 1),
-('Nissan', 'Versa', 2022, '18000.00', 'El sedán compacto que combina estilo y economía.', 'Motor de 4 cilindros, Sistema de frenos antibloqueo, Cámara de visión trasera.', 1),
-('Nissan', 'Frontier', 2021, '29000.00', 'La pickup mediana que te lleva a donde necesitas ir.', 'Motor V6 potente, Cabina King o Crew, Sistema de tracción en todas las ruedas.', 1),
-('Nissan', 'Sentra', 2022, '22000.00', 'El sedán compacto con estilo y tecnología avanzada.', 'Motor de 4 cilindros, Sistema de frenado automático de emergencia, Sistema de infoentretenimiento NissanConnect.', 1),
-('Mitsubishi', 'Eclipse', 1999, '40000.00', '¡Entra en el mundo de la velocidad con el Mitsubishi Eclipse!', 'Motor turbo de 4 cilindros, Tracción delantera, Asientos deportivos de cuero.', 0),
-('Mitsubishi', 'Lancer Evolution', 2006, '35000.00', 'El legendario sedan deportivo con raíces en el rally.', 'Motor turbo MIVEC de 4 cilindros, Sistema de tracción en todas las ruedas, Suspensión deportiva.', 1),
-('Mitsubishi', 'Outlander PHEV', 2021, '45000.00', 'La SUV híbrida enchufable que combina eficiencia y versatilidad.', 'Motor de gasolina y dos motores eléctricos, Tracción en todas las ruedas, Sistema de infoentretenimiento con pantalla táctil.', 1),
-('Mitsubishi', 'Mirage', 2022, '15000.00', 'El subcompacto eficiente y asequible que te lleva más lejos con menos.', 'Motor de 3 cilindros, Sistema de frenado automático de emergencia, Control de crucero.', 1),
-('Mitsubishi', 'ASX', 2021, '28000.00', 'La SUV compacta con estilo y capacidad.', 'Motor de 4 cilindros, Tracción delantera, Sistema de audio premium.', 1),
-('Audi', 'R8', 2022, '170000.00', 'El superdeportivo de alto rendimiento que redefine la emoción de conducir.', 'Motor V10, Tracción en todas las ruedas, Sistema de escape deportivo.', 1),
-('Audi', 'A4', 2021, '40000.00', 'El sedán ejecutivo con estilo y tecnología avanzada.', 'Motor de 4 cilindros, Tracción en todas las ruedas quattro, Sistema de infoentretenimiento MMI.', 1),
-('Audi', 'Q7', 2022, '60000.00', 'La SUV de lujo que combina elegancia y versatilidad.', 'Motor V6 turbo, Tercera fila de asientos, Sistema de audio Bang & Olufsen.', 1),
-('Audi', 'TT', 2021, '50000.00', 'El coupé deportivo que mezcla diseño clásico con tecnología moderna.', 'Motor de 4 cilindros turbo, Tracción en todas las ruedas quattro, Asientos deportivos de cuero.', 1),
-('Audi', 'A6', 2021, '55000.00', 'El sedán de lujo que combina rendimiento y confort.', 'Motor V6 turbo, Interior de cuero fino, Sistema de asistencia al conductor.', 1);
+INSERT INTO `carros` (`marca`, `modelo`, `anio`, `precio`, `descripcion`, `caracteristicas`, `disponibilidad`, `imagen`) VALUES
+('Toyota', 'Supra', 1999, '60000.00', '¡Prepárate para desatar todo el poder del Toyota Supra!', 'Motor turbo, Tracción trasera, Asientos deportivos de cuero.', 0, 'img/supra.jpg'),
+('Toyota', 'RAV4', 2017, '28000.00', 'SUV compacto versátil para aventuras urbanas y todoterreno.', 'Tracción en las cuatro ruedas, Techo corredizo, Cámara de visión trasera.', 1, 'img/rav4.jpg'),
+('Toyota', 'Corolla', 2021, '23000.00', 'El sedán compacto más vendido del mundo.', 'Sistema de seguridad Toyota Sense, Pantalla táctil de 8 pulgadas, Control de crucero adaptativo.', 1, 'img/corolla.jpg'),
+('Toyota', 'Tacoma', 2020, '32000.00', 'Pickup mediana resistente y confiable.', 'Cabina doble, Sistema de tracción activa, Cámara de vista trasera.', 1, 'img/tacoma.jpg'),
+('Toyota', 'Sienna', 2016, '34000.00', 'Minivan espaciosa y repleta de características de seguridad.', 'Asientos para 8 pasajeros, Puertas corredizas automáticas, Sistema de sonido JBL.', 1, 'img/sienna.jpg'),
+('Honda', 'HR-V', 2020, '26000.00', 'SUV subcompacto con eficiencia de combustible y espacio.', 'Asientos traseros Magic Seat, Pantalla táctil de 7 pulgadas, Honda LaneWatch.', 1, 'img/hrv.jpg'),
+('Honda', 'Ridgeline', 2019, '33000.00', 'Pickup mediana con características innovadoras.', 'Cama de carga de doble acción, Sistema de audio premium, Tracción en todas las ruedas.', 1, 'img/ridgeline.jpg'),
+('Honda', 'Fit', 2018, '23000.00', 'Hatchback subcompacto con asientos mágicos.', 'Asientos traseros Magic Seat, Sistema de infoentretenimiento de pantalla táctil de 7 pulgadas, Control de clima automático.', 1, 'img/fit.jpg'),
+('Honda', 'Insight', 2019, '27000.00', 'Híbrido compacto con estilo y eficiencia.', 'Sistema Honda Sensing, Asientos de cuero, Pantalla táctil de 8 pulgadas.', 1, 'img/insight.jpg'),
+('Honda', 'Civic Type R', 2020, '35000.00', 'Deportivo compacto con rendimiento de pista.', 'Motor turbo de 4 cilindros, Suspensión ajustable, Asientos deportivos tipo cubo.', 1, 'img/civictyper.jpg'),
+('Nissan', 'Skyline R34', 1999, '4900000.00', '¡Experimenta la emoción pura de la velocidad con el legendario Nissan Skyline R34!', 'Motor twin-turbo RB26DETT, Tracción en las cuatro ruedas, Sistema de suspensión ajustable.', 1, 'img/skyline.jpg'),
+('Nissan', '370Z', 2020, '33000.00', 'El coupé deportivo legendario que ofrece emociones puras de manejo.', 'Motor V6 de 3.7 litros, Transmisión manual de 6 velocidades, Sistema de frenos deportivos.', 1, 'img/370z.jpg'),
+('Nissan', 'Versa', 2022, '18000.00', 'El sedán compacto que combina estilo y economía.', 'Motor de 4 cilindros, Sistema de frenos antibloqueo, Cámara de visión trasera.', 1, 'img/versa.jpg'),
+('Nissan', 'Frontier', 2021, '29000.00', 'La pickup mediana que te lleva a donde necesitas ir.', 'Motor V6 potente, Cabina King o Crew, Sistema de tracción en todas las ruedas.', 1, 'img/frontier.jpg'),
+('Nissan', 'Sentra', 2022, '22000.00', 'El sedán compacto con estilo y tecnología avanzada.', 'Motor de 4 cilindros, Sistema de frenado automático de emergencia, Sistema de infoentretenimiento NissanConnect.', 1, 'img/sentra.jpg'),
+('Mitsubishi', 'Eclipse', 1999, '40000.00', '¡Entra en el mundo de la velocidad con el Mitsubishi Eclipse!', 'Motor turbo de 4 cilindros, Tracción delantera, Asientos deportivos de cuero.', 0, 'img/eclipse.jpg'),
+('Mitsubishi', 'Lancer Evolution', 2006, '35000.00', 'El legendario sedan deportivo con raíces en el rally.', 'Motor turbo MIVEC de 4 cilindros, Sistema de tracción en todas las ruedas, Suspensión deportiva.', 1, 'img/lancer.jpg'),
+ ('Mitsubishi', 'Mirage', 2022, '15000.00', 'El subcompacto eficiente y asequible que te lleva más lejos con menos.', 'Motor de 3 cilindros, Sistema de frenado automático de emergencia, Control de crucero.', 1, 'img/mirage.jpg'),
+('Mitsubishi', 'ASX', 2021, '28000.00', 'La SUV compacta con estilo y capacidad.', 'Motor de 4 cilindros, Tracción delantera, Sistema de audio premium.', 1, 'img/asx.jpg'),
+('Audi', 'R8', 2022, '170000.00', 'El superdeportivo de alto rendimiento que redefine la emoción de conducir.', 'Motor V10, Tracción en todas las ruedas, Sistema de escape deportivo.', 1, 'img/r8.jpg'),
+('Audi', 'A4', 2021, '40000.00', 'El sedán ejecutivo con estilo y tecnología avanzada.', 'Motor de 4 cilindros, Tracción en todas las ruedas quattro, Sistema de infoentretenimiento MMI.', 1, 'img/a4.jpg'),
+('Audi', 'Q7', 2022, '60000.00', 'La SUV de lujo que combina elegancia y versatilidad.', 'Motor V6 turbo, Tercera fila de asientos, Sistema de audio Bang & Olufsen.', 1, 'img/q7.jpg'),
+('Audi', 'TT', 2021, '50000.00', 'El coupé deportivo que mezcla diseño clásico con tecnología moderna.', 'Motor de 4 cilindros turbo, Tracción en todas las ruedas quattro, Asientos deportivos de cuero.', 1, 'img/tt.jpg'),
+('Audi', 'A6', 2021, '55000.00', 'El sedán de lujo que combina rendimiento y confort.', 'Motor V6 turbo, Interior de cuero fino, Sistema de asistencia al conductor.', 1, 'img/a6.jpg');
 
 
 INSERT INTO usuarios (nombre, apaterno, amaterno, telefono, correo, usuario, password) VALUES
