@@ -9,8 +9,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $correo = $_POST['correo'];
     $usuario = $_POST['usuario'];
     $password = $_POST['password'];
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-    $sql = "INSERT INTO usuarios (nombre, apaterno, amaterno, telefono, correo, usuario, password) VALUES ('$nombre', '$apaterno', '$amaterno', '$telefono', '$correo', '$usuario', '$password')";
+    $sql = "INSERT INTO usuarios (nombre, apaterno, amaterno, telefono, correo, usuario, password) VALUES ('$nombre', '$apaterno', '$amaterno', '$telefono', '$correo', '$usuario', '$hashed_password')";
     if ($conn->query($sql) === TRUE) {
         header("Location: ../../frontend/login.php");
     } else {
