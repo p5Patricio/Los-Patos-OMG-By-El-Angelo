@@ -9,8 +9,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $conn->query($sql);
 
     if ($result->num_rows == 1) {
+        $row = $result->fetch_assoc();
         session_start();
         $_SESSION['usuario'] = $usuario;
+        $_SESSION['nombre'] = $row["nombre"];
+        $_SESSION['apellidos'] = $row["apaterno"] . ' ' . $row["amaterno"];
         $_SESSION['id'] = $row["id"];
         header("Location: ../../frontend/index.php");
     } else {
