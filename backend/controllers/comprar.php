@@ -33,11 +33,14 @@
             $carro_id = $_GET['id'];
             $usuario = $_SESSION['usuario'];
 
-            $sql = "SELECT id FROM usuarios WHERE usuario='$usuario'";
+            $sql = "SELECT nombre, apaterno, amaterno, id FROM usuarios WHERE usuario='$usuario'";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
                 $row = $result->fetch_assoc();
+                $nombre_usuario = $row['nombre'];
+                $apellido_paterno = $row['apaterno'];
+                $apellido_materno = $row['amaterno'];
                 $usuario_id = $row['id'];
 
                 $sql = "SELECT * FROM carros WHERE carro_id = $carro_id AND disponibilidad = TRUE";
@@ -45,17 +48,20 @@
 
                 if ($result->num_rows > 0) {
                     $row = $result->fetch_assoc();
+                    echo "<div class='car-details'>";
                     echo "<h1>Comprar " . $row["marca"] . " " . $row["modelo"] . "</h1>";
+                    echo "<img src='../../frontend/" . $row["imagen"] . "' class='car-image'>";
                     echo "<p>Precio: $" . $row["precio"] . "</p>";
                     $enganche = calcularEnganche($row["precio"]);
                     echo "<p>Enganche: $" . $enganche . "</p>";
                     echo "<p>Total a pagar al confirmar la compra: $" . ($row["precio"] - $enganche) . "</p>";
-                    echo "<p>Usuario: " . $usuario . "</p>"; // Mostrar el usuario actual
+                    echo "<p>Persona que va a comprar: " . $nombre_usuario . " " . $apellido_paterno . " " . $apellido_materno . "</p>"; // Mostrar el nombre completo del usuario
                     echo "<form method='post' action='procesar_compra.php'>";
                     echo "<input type='hidden' name='carro_id' value='" . $carro_id . "'>";
-                    echo "<input type='hidden' name='usuario_id' value='" . $usuario_id . "'>";
+                    echo "<input type='hidden' name='usuario_id' value='" . $usuario_id . "'>"; // Usar $usuario_id obtenido de la sesión
                     echo "<input type='submit' value='Confirmar Compra'>";
                     echo "</form>";
+                    echo "</div>";
                 } else {
                     echo "<p class='error'>El carro seleccionado no está disponible para compra.</p>";
                 }
@@ -131,12 +137,24 @@
         }
 
         .container {
-            max-width: 600px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 800px;
             margin: 14% auto;
             padding: 20px;
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .car-details {
+            flex: 1;
+        }
+
+        .car-image {
+            max-width: 100%;
+            height: auto;
         }
 
         h1 {

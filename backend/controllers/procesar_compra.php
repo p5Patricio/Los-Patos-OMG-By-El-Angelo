@@ -16,11 +16,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql_disponibilidad = "UPDATE carros SET disponibilidad = FALSE WHERE carro_id = $carro_id";
         if ($conn->query($sql_disponibilidad) === TRUE) {
             $conn->commit();
+            $nombre_carro = obtenerNombreCarro($carro_id);
             $mensaje = "¡Compra realizada con éxito! Detalles de la compra:<br>";
-            $mensaje .= "Carro ID: $carro_id<br>";
+            $mensaje .= "Carro: $nombre_carro<br>";
             $mensaje .= "Precio: $" . number_format($precio, 2) . "<br>";
             $mensaje .= "Enganche: $" . number_format($enganche, 2) . "<br>";
-            $mensaje .= "Total a pagar: $" . number_format($totalPagar, 2);
+            $mensaje .= "Total a pagar: $" . number_format($totalPagar, 2). "<br>";
+            $mensaje .= "Fecha de compra: $fecha_venta<br>";
         } else {
             $conn->rollback();
             $mensaje = "Error al actualizar la disponibilidad del carro: " . $conn->error;
@@ -49,6 +51,19 @@ function obtenerPrecioCarro($carro_id) {
         return 0;
     }
 }
+
+function obtenerNombreCarro($carro_id) {
+    global $conn;
+    $sql = "SELECT marca, modelo FROM carros WHERE carro_id = $carro_id";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        return $row["marca"] . " " . $row["modelo"];
+    } else {
+        return "Desconocido";
+    }
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
