@@ -13,7 +13,7 @@
         <?php 
         session_start(); // Iniciar sesión para verificar si el usuario ha iniciado sesión
         if(isset($_SESSION['nombre']) && isset($_SESSION['apellidos']) && isset($_SESSION['id'])) {
-            echo "<p>Bienvenido, " . $_SESSION['nombre'] . " " . $_SESSION['apellidos'] . ", tienes el id " . $_SESSION['id'] . " | <a href='../backend/controllers/logout.php' class='button'>Cerrar Sesión</a></p>";
+            echo "<p>Bienvenido: " . "<b>".$_SESSION['nombre'] . " " . $_SESSION['apellidos'] ."</b>"."</b>". "<br> <a href='../backend/controllers/logout.php' class='button'>Cerrar Sesión</a></p>";
         } else {
             echo "<p><a href='login.php' class='button'>Iniciar Sesión</a> | <a href='register.php' class='button'>Registrarse</a></p>";
         }

@@ -14,6 +14,8 @@
         <ul class="nav-tabs">
             <li><a href="./index.php">Home</a></li>
             <li><a href="./login.php">Log-In</a></li>
+            <li><a href="./register.php">Registrarse</a></li>
+            <li><a href="./catalogo.php">Catalogo</a></li>
             <li><a href="./contacto.php">Contacto</a></li>
         </ul>
     </div>

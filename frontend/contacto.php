@@ -5,48 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Dinoco 🏆</title>
     <link rel="stylesheet" href="./css/contacto.css">
-    <style>
-        .contact-info {
-            text-align: center;
-            margin-top: 50px; /* Añadimos espacio arriba */
-        }
-        .contact-card {
-            background-color: #f9f9f9;
-            border-radius: 10px;
-            padding: 20px;
-            margin-top: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            display: inline-block;
-            border: 2px solid #ccc; /* Agregamos un borde */
-            max-width: 300px; /* Limitamos el ancho del contenedor */
-            margin: 0 auto; /* Centramos horizontalmente */
-            text-align: justify; /* Justificamos el texto */
-        }
-        .contact-card h3 {
-            margin-bottom: 10px;
-            color: #333; /* Cambiamos el color del texto */
-        }
-        .contact-card ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .contact-card ul li {
-            margin-bottom: 5px;
-            color: #666; /* Cambiamos el color del texto */
-        }
-        .profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            overflow: hidden;
-            margin: 0 auto 20px;
-            display: block; /* Aseguramos que la imagen esté centrada */
-            transition: transform 0.3s ease-in-out;
-        }
-        .profile-pic:hover {
-            transform: scale(1.1);
-        }
-    </style>
 </head>
 <body>
     <div class="custom-navbar">
@@ -56,7 +14,9 @@
         <ul class="nav-tabs">
             <li><a href="./index.php">Home</a></li>
             <li><a href="./login.php">Log-In</a></li>
-            <li><a href="./acercade.php">Acerca de nosotros</a></li>
+            <li><a href="./register.php">Registrarse</a></li>
+            <li><a href="./catalogo.php">Catalogo</a></li>
+            <li><a href="./acercade.php">Acerca de Nosotros</a></li>
         </ul>
     </div>
 

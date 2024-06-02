@@ -20,6 +20,7 @@ body {
 .custom-navbar h1 {
     color: white;
 }
+
 .nav-tabs {
     list-style-type: none;
     margin: 0;
@@ -55,61 +56,42 @@ footer {
     width: 100%;
 }
 
-p {
-    text-align: justify;
-}
-
-/* Nuevos estilos */
-.card {
+.container {
+    max-width: 600px;
+    margin: 14% auto;
+    padding: 20px;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    padding: 20px;
-    width: 90%;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.card h2 {
-    color: #1e488f;
+h1 {
+    color: #333;
+    text-align: center;
 }
 
-.card p {
-    color: #555;
+form {
+    text-align: center;
 }
 
-.content {
-    margin-bottom: 100px;
+input[type="submit"] {
+    width: 48%; 
+    background-color: #1e488f;
+    color: #fff;
+    border: none;
+    padding: 10px 0; 
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px; 
+    transition: background-color 0.3s ease;
 }
 
-.map-container {
-    width: 100%;
-    height: 300px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+input[type="submit"]:hover {
+    background-color: #0e2c5f;
 }
 
-.map-container iframe {
-    max-width: 100%;
-    max-height: 100%;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.fadeIn {
-    animation: fadeIn 0.5s ease forwards;
+.error {
+    color: red;
+    text-align: center;
 }

@@ -5,20 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrarse</title>
     <link rel="stylesheet" href="./css/registrarse.css">
-    <style>
-        /* Estilo para la imagen redondeada */
-        .profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            transition: transform 0.3s ease-in-out;
-        }
-        
-        /* Efecto de acercamiento al pasar el cursor */
-        .profile-pic:hover {
-            transform: scale(1.1);
-        }
-    </style>
 </head>
 <body>
     <div class="custom-navbar">
@@ -28,6 +14,8 @@
         <ul class="nav-tabs">
             <li><a href="./index.php">Home</a></li>
             <li><a href="./login.php">Log-In</a></li>
+            <li><a href="./catalogo.php">Catalogo</a></li>
+            <li><a href="./acercade.php">Acerca de Nosotros</a></li>
             <li><a href="./contacto.php">Contacto</a></li>
         </ul>
     </div>

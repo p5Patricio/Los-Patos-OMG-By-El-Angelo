@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
+    margin-bottom: 100px;
 }
 
 /* Estilos de la barra de navegación */
@@ -55,61 +56,19 @@ footer {
     width: 100%;
 }
 
-p {
-    text-align: justify;
-}
-
-/* Nuevos estilos */
-.card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
+.content-container {
+    background-color: white; /* color de fondo del contenedor */
     padding: 20px;
-    width: 90%;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* sombra más pronunciada */
+    max-width: 800px; /* ajustar el ancho del contenedor según sea necesario */
+    margin: auto;
+    margin-top: 20px;
+    border: 1px solid #ddd; /* borde del contenedor */
 }
-
-.card h2 {
-    color: #1e488f;
-}
-
-.card p {
-    color: #555;
-}
-
-.content {
-    margin-bottom: 100px;
-}
-
-.map-container {
-    width: 100%;
-    height: 300px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.map-container iframe {
-    max-width: 100%;
-    max-height: 100%;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.fadeIn {
-    animation: fadeIn 0.5s ease forwards;
+.content-container h1 {
+    font-size: 28px; /* tamaño de la fuente del título */
+    margin-bottom: 20px; /* espacio inferior para separar el título del contenido */
+    color: #333; /* color del texto */
+    text-align: center; /* centrar el título */
 }

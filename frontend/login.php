@@ -13,6 +13,8 @@
         </div>
         <ul class="nav-tabs">
             <li><a href="./index.php">Home</a></li>
+            <li><a href="./register.php">Registrarse</a></li>
+            <li><a href="./catalogo.php">Catalogo</a></li>
             <li><a href="./acercade.php">Acerca de Nosotros</a></li>
             <li><a href="./contacto.php">Contacto</a></li>
         </ul>

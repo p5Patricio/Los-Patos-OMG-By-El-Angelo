@@ -35,66 +35,65 @@ body {
 .nav-tabs li a:hover {
     border-bottom: 2px solid #fff;
 }
-/* Estilos específicos para el formulario de registro */
 
 form {
-    max-width: 400px; /* Ancho máximo del formulario */
-    margin: 50px auto; /* Centrar el formulario horizontalmente con un espacio superior */
-    padding: 20px; /* Añadir espacio alrededor del formulario */
-    background-color: #f9f9f9; /* Color de fondo del formulario */
-    border-radius: 10px; /* Borde redondeado */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
-    text-align: center; /* Centrar elementos internos */
-    position: relative; /* Establecer la posición relativa para los elementos hijos absolutamente posicionados */
-    margin-bottom: 100px; /* Agregar margen inferior para evitar que el footer tape el formulario */
+    max-width: 400px; 
+    margin: 50px auto; 
+    padding: 20px; 
+    background-color: #f9f9f9; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+    position: relative; 
+    margin-bottom: 100px; 
 }
 
 form h1 {
-    text-align: center; /* Centrar el título */
+    text-align: center; 
 }
 
 form label {
-    display: block; /* Mostrar etiquetas en una nueva línea */
-    margin-bottom: 10px; /* Espacio entre etiquetas y campos de entrada */
+    display: block; 
+    margin-bottom: 10px; 
 }
 
 form input[type="text"],
 form input[type="email"],
 form input[type="password"] {
-    width: calc(100% - 20px); /* Ancho total menos el espacio para el borde y el relleno */
-    padding: 10px; /* Añadir espacio dentro del campo de entrada */
-    margin-bottom: 15px; /* Espacio entre campos de entrada */
-    border: 1px solid #ccc; /* Borde del campo de entrada */
-    border-radius: 5px; /* Borde redondeado */
-    box-sizing: border-box; /* Incluir el relleno y el borde en el ancho total */
+    width: calc(100% - 20px); 
+    padding: 10px; 
+    margin-bottom: 15px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    box-sizing: border-box; 
 }
 
 form input[type="submit"] {
-    width: calc(100% - 20px); /* Ancho total menos el espacio para el borde y el relleno */
-    padding: 10px; /* Añadir espacio dentro del botón */
-    margin-top: 10px; /* Espacio entre el último campo de entrada y el botón */
-    background-color: #4CAF50; /* Color de fondo del botón */
-    color: white; /* Color del texto del botón */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Borde redondeado */
-    cursor: pointer; /* Cursor */
-    box-sizing: border-box; /* Incluir el relleno y el borde en el ancho total */
+    width: calc(100% - 20px); 
+    padding: 10px; 
+    margin-top: 10px; 
+    background-color: #4CAF50; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    box-sizing: border-box; 
 }
 
 form input[type="submit"]:hover {
-    background-color: #45a049; /* Color de fondo al pasar el cursor sobre el botón */
+    background-color: #45a049; 
 }
 
 form a {
-    display: block; /* Mostrar en una nueva línea */
-    text-align: center; /* Centrar el enlace */
-    margin-top: 10px; /* Espacio entre el botón y el enlace */
-    text-decoration: none; /* Sin subrayado */
-    color: #666; /* Color del texto */
+    display: block; 
+    text-align: center; 
+    margin-top: 10px; 
+    text-decoration: none; 
+    color: #666; 
 }
 
 form a:hover {
-    color: #333; /* Color del texto al pasar el cursor sobre el enlace */
+    color: #333; 
 }
 
 footer {
@@ -102,7 +101,20 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0; 
-    position: fixed; /* Fijar el footer en la parte inferior de la ventana */
-    bottom: 0; /* Colocar el footer en la parte inferior */
+    position: fixed; 
+    bottom: 0; 
     width: 100%;
+}
+
+/* Estilo para la imagen redondeada */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto de acercamiento al pasar el cursor */
+.profile-pic:hover {
+    transform: scale(1.1);
 }
