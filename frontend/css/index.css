@@ -1,0 +1,122 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+/* Estilos de la barra de navegación */
+.custom-navbar {
+    background-color: #1e488f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px; 
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); 
+    color: white; 
+}
+.nav-tabs {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.nav-tabs li {
+    display: inline;
+    margin-right: 20px;
+}
+.nav-tabs li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+.nav-tabs li a:hover {
+    border-bottom: 2px solid #fff;
+}
+/* Estilos del footer */
+footer {
+    background-color: #1e488f;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0; 
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+/* Estilos personalizados para centrar el formulario */
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 160px); 
+}
+/* Estilos del formulario */
+.card {
+    background-color: #fff;
+    max-width: 300px; 
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px; 
+    text-align: center;
+}
+.form-group {
+    margin-bottom: 20px;
+    text-align: left; 
+}
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    box-sizing: border-box; 
+}
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+}
+.btn-primary,
+.btn-secondary {
+    width: 48%; 
+    background-color: #1e488f;
+    color: #fff;
+    border: none;
+    padding: 10px 0; 
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px; 
+    transition: background-color 0.3s ease;
+}
+.btn-primary:hover,
+.btn-secondary:hover {
+    background-color: #0e2c5f;
+}
+
+a {
+    text-decoration: none; 
+}
+
+.profile-image {
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%; 
+    transition: transform 0.3s; 
+}
+
+.image-container {
+    text-align: center; 
+    margin-bottom: 20px; 
+}
+
+.profile-image:hover {
+    transform: scale(1.2); 
+}

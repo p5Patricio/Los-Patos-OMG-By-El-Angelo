@@ -1,12 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrarse</title>
-    <!-- Estilos, scripts, etc. -->
+    <link rel="stylesheet" href="./css/registrarse.css">
+    <style>
+        /* Estilo para la imagen redondeada */
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        /* Efecto de acercamiento al pasar el cursor */
+        .profile-pic:hover {
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body>
-    <h1>Registrarse</h1>
+    <div class="custom-navbar">
+        <div>
+            <h1 style="font-size: 24px;">Dinoco 🏆</h1>
+        </div>
+        <ul class="nav-tabs">
+            <li><a href="./index.php">Home</a></li>
+            <li><a href="./login.php">Log-In</a></li>
+            <li><a href="./contacto.php">Contacto</a></li>
+        </ul>
+    </div>
+    
     <form method="post" action="../backend/controllers/register_process.php">
+        <!-- Título del formulario -->
+        <h2 style="text-align: center;">Regístrate</h2>
+        
+        <!-- Imagen redondeada con efecto de acercamiento -->
+        <img src="./img/rayo.png" alt="Imagen de perfil" class="profile-pic"><br><br>
+        
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required><br><br>
 
@@ -29,7 +61,11 @@
         <input type="password" id="password" name="password" required><br><br>
 
         <input type="submit" value="Registrarse">
+        <a href="login.php">Iniciar Sesión</a> <!-- Enlace agregado -->
     </form>
-    <a href="login.php">Iniciar Sesión</a>
+    
+    <footer>
+        &copy; 2024 Dinoco - Todos los derechos reservados.
+    </footer>
 </body>
 </html>

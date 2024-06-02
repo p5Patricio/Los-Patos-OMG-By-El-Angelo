@@ -1,0 +1,108 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+/* Estilos de la barra de navegación */
+.custom-navbar {
+    background-color: #1e488f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px; 
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); 
+    color: white; 
+}
+.nav-tabs {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.nav-tabs li {
+    display: inline;
+    margin-right: 20px;
+}
+.nav-tabs li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+.nav-tabs li a:hover {
+    border-bottom: 2px solid #fff;
+}
+/* Estilos específicos para el formulario de registro */
+
+form {
+    max-width: 400px; /* Ancho máximo del formulario */
+    margin: 50px auto; /* Centrar el formulario horizontalmente con un espacio superior */
+    padding: 20px; /* Añadir espacio alrededor del formulario */
+    background-color: #f9f9f9; /* Color de fondo del formulario */
+    border-radius: 10px; /* Borde redondeado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    text-align: center; /* Centrar elementos internos */
+    position: relative; /* Establecer la posición relativa para los elementos hijos absolutamente posicionados */
+    margin-bottom: 100px; /* Agregar margen inferior para evitar que el footer tape el formulario */
+}
+
+form h1 {
+    text-align: center; /* Centrar el título */
+}
+
+form label {
+    display: block; /* Mostrar etiquetas en una nueva línea */
+    margin-bottom: 10px; /* Espacio entre etiquetas y campos de entrada */
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+    width: calc(100% - 20px); /* Ancho total menos el espacio para el borde y el relleno */
+    padding: 10px; /* Añadir espacio dentro del campo de entrada */
+    margin-bottom: 15px; /* Espacio entre campos de entrada */
+    border: 1px solid #ccc; /* Borde del campo de entrada */
+    border-radius: 5px; /* Borde redondeado */
+    box-sizing: border-box; /* Incluir el relleno y el borde en el ancho total */
+}
+
+form input[type="submit"] {
+    width: calc(100% - 20px); /* Ancho total menos el espacio para el borde y el relleno */
+    padding: 10px; /* Añadir espacio dentro del botón */
+    margin-top: 10px; /* Espacio entre el último campo de entrada y el botón */
+    background-color: #4CAF50; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer; /* Cursor */
+    box-sizing: border-box; /* Incluir el relleno y el borde en el ancho total */
+}
+
+form input[type="submit"]:hover {
+    background-color: #45a049; /* Color de fondo al pasar el cursor sobre el botón */
+}
+
+form a {
+    display: block; /* Mostrar en una nueva línea */
+    text-align: center; /* Centrar el enlace */
+    margin-top: 10px; /* Espacio entre el botón y el enlace */
+    text-decoration: none; /* Sin subrayado */
+    color: #666; /* Color del texto */
+}
+
+form a:hover {
+    color: #333; /* Color del texto al pasar el cursor sobre el enlace */
+}
+
+footer {
+    background-color: #1e488f;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0; 
+    position: fixed; /* Fijar el footer en la parte inferior de la ventana */
+    bottom: 0; /* Colocar el footer en la parte inferior */
+    width: 100%;
+}

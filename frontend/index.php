@@ -8,8 +8,8 @@
 </head>
 <body>
     <div class="container">
-        <h1>Bienvenido a nuestro sitio de Venta y Renta de Carros</h1>
-        
+        <h1>Bienvenido a Dinoco</h1>
+        <img src="./img/dinoco.png" alt="Imagen de perfil" class="profile-image">
         <?php 
         session_start(); // Iniciar sesión para verificar si el usuario ha iniciado sesión
         if(isset($_SESSION['nombre']) && isset($_SESSION['apellidos']) && isset($_SESSION['id'])) {
@@ -27,7 +27,7 @@
         if(isset($_SESSION['nombre'])) {
             echo "<a href='./comprasyventas.php' class='button'>Ver Mis Compras y Rentas</a>";
         } else {
-            echo "<p>Para ver sus compras y rentas, por favor <a href='login.php' class='button'>Inicie Sesión</a></p>";
+            echo "<p>Para ver sus compras y rentas, por favor <a href='login.php'>Inicie Sesión</a></p>";
         }
         ?>
     </div>
