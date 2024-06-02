@@ -4,14 +4,19 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background-color:#f0f0f0;;
+  background: url('../img/fondo.jpg') no-repeat center center fixed; 
+  background-size: 100% 100%;
   overflow: hidden; 
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh; 
 }
-
+.contenido {
+  color: white; /* Cambia esto según el color de tu fondo para que el texto sea legible */
+  text-align: center;
+  padding: 50px;
+}
 .container {
   max-width: 800px;
   padding: 30px;
