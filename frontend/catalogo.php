@@ -20,7 +20,7 @@
             <li><a href="./contacto.php">Contacto</a></li>
         </ul>
     </div>
-    <h1>Catálogo de Carros</h1>
+    <h2 class="titulo">Catálogo de Carros</h2>
     <?php include '../backend/controllers/mostrar_catalogo.php'; ?>
     <footer>
         &copy; 2024 Dinoco - Todos los derechos reservados.

@@ -50,6 +50,7 @@ body {
 /* Ajustar el margen superior del contenido principal para evitar que quede oculto debajo de la navbar */
 .contenedor-carros {
     margin-top: 60px; /* Ajustar según la altura de la navbar */
+    margin-bottom: 50px;
 }
 
 footer {
@@ -61,3 +62,17 @@ footer {
     bottom: 0; 
     width: 100%;
 }
+
+.titulo {
+    font-size: 28px;
+    color: #000000;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Efecto de sombra */
+    border-radius: 10px; /* Redondear las esquinas */
+    padding: 10px 20px; /* Espacio interno */
+    background-color: #f0f0f0; /* Color de fondo */
+    display: inline-block; /* Convertir en bloque para que se ajuste al contenido */
+}
+

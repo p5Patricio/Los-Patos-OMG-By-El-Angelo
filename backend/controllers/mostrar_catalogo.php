@@ -12,8 +12,6 @@ echo '<link rel="stylesheet" href="../frontend/css/mostrar_catalogo.css">'; // E
 echo '</head>';
 echo '<body>';
 
-echo '<h1 class="titulo">Catálogo de carros</h1>';
-
 echo '<div class="contenedor-carros">';
 
 if ($result->num_rows > 0) {
