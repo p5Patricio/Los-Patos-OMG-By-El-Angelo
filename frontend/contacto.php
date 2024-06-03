@@ -21,9 +21,9 @@
     </div>
 
     <div class="contact-info">
-        <h2>¡Contáctanos!</h2>
-        <p>Para obtener más información sobre nuestros servicios de venta y alquiler de automóviles, no dudes en contactarnos:</p>
         <div class="contact-card">
+        <h2 style="text-align: center;">¡Contáctanos!</h2>
+        <p style="text-align: center;">Para obtener más información sobre nuestros servicios de venta y alquiler de automóviles, no dudes en contactarnos.</p>
             <img class="profile-pic" src="./img/jefesin.png" alt="Foto del Jefe del Área">
             <h3>Jefe del Área</h3>
             <p>Graduado con honores de la Universidad de Guanajuato con un título en Ingeniería Mecánica, nuestro Jefe del Área cuenta con una sólida formación académica y experiencia en la industria automotriz.</p>

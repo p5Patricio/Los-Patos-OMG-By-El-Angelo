@@ -2,60 +2,15 @@
 $sql = "SELECT * FROM carros";
 $result = $conn->query($sql);
 
-echo '<style>
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        margin: 0;
-        padding: 20px;
-    }
-    .contenedor-carros {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-    }
-    .carro {
-        background: white;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        margin: 20px;
-        padding: 20px;
-        width: 300px;
-        text-align: center;
-    }
-    .carro img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin: 0 auto 10px;
-    }
-    .carro h2 {
-        font-size: 24px;
-        margin: 10px 0;
-    }
-    .carro p {
-        font-size: 16px;
-        margin: 5px 0;
-    }
-    .carro button {
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        margin: 10px 5px;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    .carro button:disabled {
-        background-color: #ccc;
-        cursor: not-allowed;
-    }
-</style>';
+echo '<!DOCTYPE html>';
+echo '<html lang="es">';
+echo '<head>';
+echo '<meta charset="UTF-8">';
+echo '<meta name="viewport" content="width=device-width, initial-scale=1.0">';
+echo '<title>Catálogo de Carros</title>';
+echo '<link rel="stylesheet" href="../frontend/css/mostrar_catalogo.css">'; // Enlace al archivo CSS
+echo '</head>';
+echo '<body>';
 
 echo '<h1 class="titulo">Catálogo de carros</h1>';
 
@@ -66,10 +21,10 @@ if ($result->num_rows > 0) {
         echo "<div class='carro'>";
         echo "<img src='" . $row["imagen"] . "' alt='" . $row["marca"] . " " . $row["modelo"] . "'>";
         echo "<h2>" . $row["marca"] . " " . $row["modelo"] . "</h2>";
-        echo "<p>Año: " . $row["anio"] . "</p>";
-        echo "<p>Precio: $" . $row["precio"] . "</p>";
-        echo "<p>" . $row["descripcion"] . "</p>";
-        echo "<p>Características: " . $row["caracteristicas"] . "</p>";
+        echo "<p class='alineado-izquierda'>Año: " . $row["anio"] . "</p>";
+        echo "<p class='alineado-izquierda'>Precio: $" . $row["precio"] . "</p>";
+        echo "<p class='alineado-izquierda'>" . $row["descripcion"] . "</p>";
+        echo "<p class='alineado-izquierda'>Características: " . $row["caracteristicas"] . "</p>";
 
         // Verificar la disponibilidad y deshabilitar los botones si no está disponible
         if ($row["disponibilidad"] == 1) {

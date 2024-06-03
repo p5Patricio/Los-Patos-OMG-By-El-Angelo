@@ -3,7 +3,14 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background: url('../img/fondo.jpg') no-repeat center center fixed;
+    background-size: 100% 100%;
+}
+
+.contenido {
+    color: white; /* Cambia esto según el color de tu fondo para que el texto sea legible */
+    text-align: center;
+    padding: 50px;
 }
 
 /* Estilos de la barra de navegación */
