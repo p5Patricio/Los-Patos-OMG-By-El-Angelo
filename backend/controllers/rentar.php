@@ -45,6 +45,7 @@
                     $monto_total = calcularMontoTotalRenta($precio_renta);
 
                     echo "<h1>Rentar $marca_modelo</h1>";
+                    echo "<img src='../../frontend/" . $row["imagen"] . "' class='car-image'>";
                     echo "<p>Precio de renta: $ $precio_renta por semana</p>";
                     echo "<p>Monto total estimado a pagar: $ $monto_total</p>";
                     echo "<p>Usuario: $usuario</p>";
@@ -72,5 +73,6 @@
     <footer>
         &copy; 2024 Dinoco - Todos los derechos reservados.
     </footer>
+    
 </body>
 </html>

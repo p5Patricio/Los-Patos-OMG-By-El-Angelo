@@ -3,7 +3,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background: url('../img/fondo.jpg') no-repeat center center fixed;
+    background-size: 100% 100%;
 }
 
 /* Estilos de la barra de navegación */
@@ -20,7 +21,6 @@ body {
 .custom-navbar h1 {
     color: white;
 }
-
 .nav-tabs {
     list-style-type: none;
     margin: 0;
@@ -58,22 +58,20 @@ footer {
 
 .container {
     max-width: 600px;
-    margin: 14% auto;
-    padding: 20px;
+    margin: 40px auto;
+    padding: 30px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: calc(100px + 20px); /* Ajusta el valor según la altura del pie de página + 20px de espacio adicional */
 }
-
 h1 {
     color: #333;
     text-align: center;
 }
-
 form {
     text-align: center;
 }
-
 input[type="submit"] {
     width: 48%; 
     background-color: #1e488f;
@@ -86,12 +84,21 @@ input[type="submit"] {
     font-size: 16px; 
     transition: background-color 0.3s ease;
 }
-
 input[type="submit"]:hover {
     background-color: #0e2c5f;
 }
-
 .error {
     color: red;
     text-align: center;
+}
+
+.car-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.contenido {
+    color: white; /* Cambia esto según el color de tu fondo para que el texto sea legible */
+    text-align: center;
+    padding: 50px;
 }
