@@ -1,0 +1,80 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('../img/fondo.jpg') no-repeat center center fixed;
+    background-size: 100% 100%;
+}
+
+/* Estilos de la barra de navegación */
+.custom-navbar {
+    background-color: #1e488f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.custom-navbar h1 {
+    color: white;
+}
+.nav-tabs {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-tabs li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav-tabs li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+.nav-tabs li a:hover {
+    border-bottom: 2px solid #fff;
+}
+
+/* Estilos del footer */
+footer {
+    background-color: #1e488f;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0; 
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.content-container {
+    background-color: white; /* color de fondo del contenedor */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* sombra más pronunciada */
+    max-width: 800px; /* ajustar el ancho del contenedor según sea necesario */
+    margin: auto;
+    margin-top: 20px;
+    border: 1px solid #ddd; /* borde del contenedor */
+}
+.content-container h1 {
+    font-size: 28px; /* tamaño de la fuente del título */
+    margin-bottom: 20px; /* espacio inferior para separar el título del contenido */
+    color: #333; /* color del texto */
+    text-align: center; /* centrar el título */
+}
+
+.contenido {
+    color: white; /* Cambia esto según el color de tu fondo para que el texto sea legible */
+    text-align: center;
+    padding: 50px;
+}

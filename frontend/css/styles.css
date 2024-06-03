@@ -1,43 +1,67 @@
-/* Estilos de la barra de navegación */
-.custom-navbar {
-    background-color: #1e488f;
-    height: 80px;
-  }
-  
-  /* Estilos personalizados para centrar el formulario */
-  .center-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: calc(100vh - 80px - 60px); /* Ajustar la altura para centrarlo verticalmente y descontar la altura de la barra de navegación y el footer */
-  }
-  
-  /* Estilos del formulario */
-  .card {
-    max-width: 500px;
-    width: 100%;
-  }
+/* Estilos generales */
 
-  .welcome-message {
-    text-align: center; /* Centra el texto horizontalmente */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('../img/fondo.jpg') no-repeat center center fixed; 
+  background-size: 100% 100%;
+  overflow: hidden; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+}
+.contenido {
+  color: white; /* Cambia esto según el color de tu fondo para que el texto sea legible */
+  text-align: center;
+  padding: 50px;
+}
+.container {
+  max-width: 800px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  text-align: center; 
 }
 
-.welcome-message h1 {
-    font-size: 35px; /* Tamaño de fuente para el título */
-    color:#1e488f;
+h1, h2 {
+  color: #333;
 }
 
-.welcome-message p {
-    font-size: 16px; /* Tamaño de fuente para el párrafo */
+.button {
+  display: inline-block;
+  padding: 15px 30px;
+  margin: 15px 10px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.2);
 }
 
-  
-  /* Estilos del footer */
-  footer {
-    background-color: #1e488f;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    position: relative; /* Cambiar a relativa */
-    height: 80px; /* Establecer una altura fija para el footer */
-  }
+.button:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+.profile-image {
+  width: 150px; 
+  height: 150px; 
+  border-radius: 30%; 
+  margin-bottom: 20px; 
+  transition: transform 0.3s ease-in-out; 
+}
+
+.profile-image:hover {
+  transform: scale(1.1); 
+}
+

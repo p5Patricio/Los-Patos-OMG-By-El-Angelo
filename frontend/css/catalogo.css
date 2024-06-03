@@ -1,93 +1,78 @@
-/* Estilos de la barra de navegación */
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    margin-bottom: 85px;
+}
+
 /* Estilos de la barra de navegación */
 .custom-navbar {
     background-color: #1e488f;
-    height: 80px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000; /* Aumentamos el valor de z-index */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    color: white;
+    position: fixed; /* Fijar la barra en la parte superior */
+    top: 0; /* Posicionarla en la parte superior */
+    left: 0; /* Asegurarse que abarque todo el ancho de la página */
+    right: 0; /* Asegurarse que abarque todo el ancho de la página */
+    z-index: 1000; /* Asegurarse que esté por encima de otros elementos */
 }
 
-
-/* Estilos para el título del catálogo */
-.catalogo-title-container {
-    position: relative;
-    top: 100px; /* Ajustamos el valor de top */
-    margin-bottom: 50px; /* Agregamos margen inferior */
+.nav-tabs {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-.catalogo-title {
-    font-size: 2.5rem;
-    color: #333;
+.nav-tabs li {
+    display: inline;
+    margin-right: 20px;
 }
 
-/* Estilos del footer */
-.footer {
+.nav-tabs li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+.nav-tabs li a:hover {
+    border-bottom: 2px solid #fff;
+}
+
+/* Ajustar el margen superior del contenido principal para evitar que quede oculto debajo de la navbar */
+.contenedor-carros {
+    margin-top: 60px; /* Ajustar según la altura de la navbar */
+    margin-bottom: 50px;
+}
+
+footer {
     background-color: #1e488f;
     color: #fff;
     text-align: center;
-    padding: 20px;
-    height: auto; /* Cambiado a altura automática */
+    padding: 20px 0; 
+    position: fixed; 
+    bottom: 0; 
     width: 100%;
-    position: fixed; /* Fija el pie de página */
-    bottom: 0; /* Lo sitúa en la parte inferior */
-    left: 0; /* Asegura que esté alineado a la izquierda */
-    right: 0; /* Asegura que esté alineado a la derecha */
 }
 
-/* Estilos para el contenedor principal */
-.main-container {
-    position: relative; /* Asegura que el pie de página se posicione correctamente */
-    min-height: 100vh; /* Establece una altura mínima igual a la altura de la ventana */
-    padding-bottom: 80px; /* Ajusta el espacio en la parte inferior para el pie de página */
-}
-
-
-
-/* Estilos para el contenedor de botones */
-.button-container {
-    margin-top: 160px; /* Ajustamos el valor de margin-top */
-}
-
-/* Estilos para centrar los botones */
-.btn-group {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.btn-group .btn {
-    margin: 5px; /* Ajusta el margen según tus preferencias */
-}
-
-/* Estilos para los botones */
-.btn-group .btn.active {
-    z-index: 0; /* Asegura que los botones seleccionados estén por debajo de la barra de navegación */
-}
-
-
-/* Estilos para las imágenes dentro de las tarjetas */
-/* Estilos para las imágenes dentro de las tarjetas */
-.card-img-top {
-    width: 200px; /* Establece un ancho fijo para las imágenes */
-    height: 200px; /* Establece una altura fija para las imágenes */
-    object-fit: contain; /* Ajusta la imagen dentro del contenedor manteniendo su relación de aspecto */
-    border-radius: 10px; /* Añade bordes redondeados a las imágenes */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Agrega una sombra suave a las imágenes */
-}
-
-/* Estilos para el contenedor de imágenes */
-.image-container {
-    display: flex; /* Muestra las imágenes en línea */
-    justify-content: center; /* Centra horizontalmente las imágenes */
-    align-items: center; /* Centra verticalmente las imágenes */
-}
-
-/* Estilos para cada imagen dentro del contenedor */
-.image-container img {
-    width: 150px; /* Ajusta el tamaño de las imágenes según sea necesario */
-    height: auto; /* Ajusta la altura automáticamente para mantener la relación de aspecto */
-    margin: 0 15px; /* Ajusta el margen horizontal entre las imágenes */
+.titulo {
+    font-size: 28px;
+    color: #000000;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Efecto de sombra */
+    border-radius: 10px; /* Redondear las esquinas */
+    padding: 10px 20px; /* Espacio interno */
+    background-color: #f0f0f0; /* Color de fondo */
+    display: inline-block; /* Convertir en bloque para que se ajuste al contenido */
 }
 
