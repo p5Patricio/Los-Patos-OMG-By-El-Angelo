@@ -95,7 +95,8 @@ INSERT INTO `carros` (`marca`, `modelo`, `anio`, `precio`, `descripcion`, `carac
 ('Audi', 'A4', 2021, '40000.00', 'El sedán ejecutivo con estilo y tecnología avanzada.', 'Motor de 4 cilindros, Tracción en todas las ruedas quattro, Sistema de infoentretenimiento MMI.', 1, 'img/a4.jpg'),
 ('Audi', 'Q7', 2022, '60000.00', 'La SUV de lujo que combina elegancia y versatilidad.', 'Motor V6 turbo, Tercera fila de asientos, Sistema de audio Bang & Olufsen.', 1, 'img/q7.jpg'),
 ('Audi', 'TT', 2021, '50000.00', 'El coupé deportivo que mezcla diseño clásico con tecnología moderna.', 'Motor de 4 cilindros turbo, Tracción en todas las ruedas quattro, Asientos deportivos de cuero.', 1, 'img/tt.jpg'),
-('Audi', 'A6', 2021, '55000.00', 'El sedán de lujo que combina rendimiento y confort.', 'Motor V6 turbo, Interior de cuero fino, Sistema de asistencia al conductor.', 1, 'img/a6.jpg');
+('Audi', 'A6', 2021, '55000.00', 'El sedán de lujo que combina rendimiento y confort.', 'Motor V6 turbo, Interior de cuero fino, Sistema de asistencia al conductor.', 1, 'img/a6.jpg'),
+('Audi', 'A8', 2024, '110000.00', 'Experimenta la elegancia y el poder del Audi A8.', 'Motor V8, Tracción en las cuatro ruedas, Asientos de cuero de lujo.', 1, 'img/a8.jpg');
 
 
 INSERT INTO usuarios (nombre, apaterno, amaterno, telefono, correo, usuario, password) VALUES
