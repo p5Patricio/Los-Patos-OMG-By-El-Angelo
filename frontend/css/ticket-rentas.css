@@ -1,14 +1,17 @@
+/* Estilos CSS */
 body {
     font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
+    padding: 0;
+    background: url('../img/fondo.jpg') no-repeat center center fixed;
+    background-size: 100% 100%;
 }
 
 .container {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
     text-align: center;
     background-color: #ffffff;
     border-radius: 10px;
@@ -17,7 +20,10 @@ body {
     max-width: 400px;
     width: 100%;
     position: relative;
+    margin: 5% auto; /* Esto centrará horizontalmente el contenedor */
 }
+
+
 
 .ticket-info {
     text-align: left;
@@ -36,7 +42,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-top: 20px; /* Espacio entre el mensaje y el botón */
+    margin-top: 20px; /* Agregado para espacio entre el mensaje y el botón */
 }
 
 button:hover {
@@ -49,5 +55,11 @@ button:hover {
     border-radius: 50%;
     transition: width 0.3s, height 0.3s;
     display: block; /* Para que el margen 'auto' funcione */
-    margin: 0 auto 20px; /* Centrar horizontalmente y añadir espacio debajo */
+    margin: 0 auto; /* Centrar horizontalmente */
+}
+
+.contenido {
+    color: white; /* Cambia esto según el color de tu fondo para que el texto sea legible */
+    text-align: center;
+    padding: 50px;
 }

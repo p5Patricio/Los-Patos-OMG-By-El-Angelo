@@ -18,7 +18,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['nombre'] = $row["nombre"];
             $_SESSION['apellidos'] = $row["apaterno"] . ' ' . $row["amaterno"];
             $_SESSION['id'] = $row["id"];
-            header("Location: ../../../Los-Patos-OMG-By-El-Angelo/frontend/index.php");
+            $_SESSION['rol'] = $row["rol"]; // Agregar el rol del usuario a la sesión
+            if ($row["rol"] === "admin") {
+                // Si el usuario es un administrador, redirigir al panel de administrador
+                header("Location: admin_panel.php");
+            } else {
+                // Si el usuario es un usuario normal, redirigir al panel de usuario normal o a donde sea necesario
+                header("Location: ../../../Los-Patos-OMG-By-El-Angelo/frontend/index.php");
+            }
             exit(); // Asegúrate de salir después de redirigir
         } else {
             $message = "Usuario o contraseña incorrectos.";

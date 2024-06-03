@@ -107,3 +107,19 @@ footer {
 .profile-pic:hover {
     transform: scale(1.1);
 }
+
+.cloud-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    text-align: center;
+    max-width: max-content;
+    margin: 20px auto;
+    margin-bottom: 100px; /* Agregamos un margen inferior para evitar la superposición con el pie de página */
+}
+
+.cloud-container p {
+    margin: 0;
+    color: #333;
+}

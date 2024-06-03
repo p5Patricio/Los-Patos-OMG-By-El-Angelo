@@ -11,7 +11,8 @@ CREATE TABLE IF NOT EXISTS usuarios (
     telefono VARCHAR(15),
     correo VARCHAR(100) UNIQUE NOT NULL,
     usuario VARCHAR(50) UNIQUE NOT NULL,
-    password VARCHAR(255) NOT NULL
+    password VARCHAR(255) NOT NULL,
+    rol ENUM('user', 'admin') NOT NULL DEFAULT 'user'
 );
 
 -- Tabla de carros
@@ -72,7 +73,7 @@ CREATE TABLE IF NOT EXISTS pagos_rentas (
 );
 
 INSERT INTO `carros` (`marca`, `modelo`, `anio`, `precio`, `descripcion`, `caracteristicas`, `disponibilidad`, `imagen`) VALUES
-('Toyota', 'Supra', 1999, '60000.00', '¡Prepárate para desatar todo el poder del Toyota Supra!', 'Motor turbo, Tracción trasera, Asientos deportivos de cuero.', 0, 'img/supra.jpg'),
+('Toyota', 'Supra', 1999, '60000.00', '¡Prepárate para desatar todo el poder del Toyota Supra!', 'Motor turbo, Tracción trasera, Asientos deportivos de cuero.', 1, 'img/supra.jpg'),
 ('Toyota', 'RAV4', 2017, '28000.00', 'SUV compacto versátil para aventuras urbanas y todoterreno.', 'Tracción en las cuatro ruedas, Techo corredizo, Cámara de visión trasera.', 1, 'img/rav4.jpg'),
 ('Toyota', 'Corolla', 2021, '23000.00', 'El sedán compacto más vendido del mundo.', 'Sistema de seguridad Toyota Sense, Pantalla táctil de 8 pulgadas, Control de crucero adaptativo.', 1, 'img/corolla.jpg'),
 ('Toyota', 'Tacoma', 2020, '32000.00', 'Pickup mediana resistente y confiable.', 'Cabina doble, Sistema de tracción activa, Cámara de vista trasera.', 1, 'img/tacoma.jpg'),
@@ -95,64 +96,65 @@ INSERT INTO `carros` (`marca`, `modelo`, `anio`, `precio`, `descripcion`, `carac
 ('Audi', 'A4', 2021, '40000.00', 'El sedán ejecutivo con estilo y tecnología avanzada.', 'Motor de 4 cilindros, Tracción en todas las ruedas quattro, Sistema de infoentretenimiento MMI.', 1, 'img/a4.jpg'),
 ('Audi', 'Q7', 2022, '60000.00', 'La SUV de lujo que combina elegancia y versatilidad.', 'Motor V6 turbo, Tercera fila de asientos, Sistema de audio Bang & Olufsen.', 1, 'img/q7.jpg'),
 ('Audi', 'TT', 2021, '50000.00', 'El coupé deportivo que mezcla diseño clásico con tecnología moderna.', 'Motor de 4 cilindros turbo, Tracción en todas las ruedas quattro, Asientos deportivos de cuero.', 1, 'img/tt.jpg'),
-('Audi', 'A6', 2021, '55000.00', 'El sedán de lujo que combina rendimiento y confort.', 'Motor V6 turbo, Interior de cuero fino, Sistema de asistencia al conductor.', 1, 'img/a6.jpg');
+('Audi', 'A6', 2021, '55000.00', 'El sedán de lujo que combina rendimiento y confort.', 'Motor V6 turbo, Interior de cuero fino, Sistema de asistencia al conductor.', 1, 'img/a6.jpg'),
+('Audi', 'A8', 2024, '110000.00', 'Experimenta la elegancia y el poder del Audi A8.', 'Motor V8, Tracción en las cuatro ruedas, Asientos de cuero de lujo.', 1, 'img/a8.jpg');
 
 
-INSERT INTO usuarios (nombre, apaterno, amaterno, telefono, correo, usuario, password) VALUES
-('Juan', 'Pérez', 'Gómez', '5551234567', 'juan.perez@example.com', 'juanp', 'password123'),
-('María', 'López', 'Martínez', '5559876543', 'maria.lopez@example.com', 'marial', 'password456'),
-('Carlos', 'Sánchez', 'Rodríguez', '5551112222', 'carlos.sanchez@example.com', 'carloss', 'password789'),
-('Ana', 'Hernández', 'Fernández', '5553334444', 'ana.hernandez@example.com', 'anah', 'password012');
+INSERT INTO usuarios (nombre, apaterno, amaterno, telefono, correo, usuario, password, rol) VALUES
+('Juan', 'Pérez', 'Gómez', '5551234567', 'juan.perez@example.com', 'juanp', 'password123', 'admin'),
+('María', 'López', 'Martínez', '5559876543', 'maria.lopez@example.com', 'marial', 'password456', 'user'),
+('Carlos', 'Sánchez', 'Rodríguez', '5551112222', 'carlos.sanchez@example.com', 'carloss', 'password789', 'user'),
+('Ana', 'Hernández', 'Fernández', '5553334444', 'ana.hernandez@example.com', 'anah', 'password012', 'user');
 
 
--- Insertar datos en la tabla de ventas
-INSERT INTO ventas (usuario_id, carro_id, fecha_venta, enganche) VALUES
-(1, 1, '2023-01-15', 20000.00),
-(1, 2, '2023-02-20', 22000.00),
-(2, 3, '2023-03-25', 30000.00),
-(3, 1, '2023-04-30', 20000.00); -- Ejemplo de un usuario que compra más de un carro
+-- -- Insertar datos en la tabla de ventas
+-- INSERT INTO ventas (usuario_id, carro_id, fecha_venta, enganche) VALUES
+-- (1, 1, '2023-01-15', 20000.00),
+-- (1, 2, '2023-02-20', 22000.00),
+-- (2, 3, '2023-03-25', 30000.00),
+-- (3, 1, '2023-04-30', 20000.00); -- Ejemplo de un usuario que compra más de un carro
 
--- Insertar datos en la tabla de ventas
-INSERT INTO rentas (usuario_id, carro_id, fecha_inicio, fecha_fin, monto_total)
-	VALUES(1, 3, '2024-05-29', '2024-06-05', 250.00),
-		(1, 7, '2024-06-29', '2024-07-05', 250.00),
-        (1, 7, '2024-07-29', '2024-08-05', 250.00);
+-- -- Insertar datos en la tabla de ventas
+-- INSERT INTO rentas (usuario_id, carro_id, fecha_inicio, fecha_fin, monto_total)
+-- 	VALUES(1, 3, '2024-05-29', '2024-06-05', 250.00),
+-- 		(1, 7, '2024-06-29', '2024-07-05', 250.00),
+--         (1, 7, '2024-07-29', '2024-08-05', 250.00);
 
--- SELECT * from carros where carro_id=1
+-- -- SELECT * from carros where carro_id=1
 
--- Insertar datos en la tabla de pagos
-INSERT INTO pagos_ventas (venta_id, fecha_pago, enganche, metodo_pago) VALUES
-(1, '2023-01-16', 20000.00, 'tarjeta'),
-(2, '2023-02-21', 22000.00, 'transferencia'),
-(3, '2023-03-26', 30000.00, 'efectivo');
+-- -- Insertar datos en la tabla de pagos
+-- INSERT INTO pagos_ventas (venta_id, fecha_pago, enganche, metodo_pago) VALUES
+-- (1, '2023-01-16', 20000.00, 'tarjeta'),
+-- (2, '2023-02-21', 22000.00, 'transferencia'),
+-- (3, '2023-03-26', 30000.00, 'efectivo');
 
-INSERT INTO pagos_rentas (renta_id, fecha_pago, monto_pago, metodo_pago) VALUES
-(1, '2023-01-16', 20000.00, 'tarjeta'),
-(2, '2023-02-21', 22000.00, 'transferencia'),
-(3, '2023-03-26', 30000.00, 'efectivo');
+-- INSERT INTO pagos_rentas (renta_id, fecha_pago, monto_pago, metodo_pago) VALUES
+-- (1, '2023-01-16', 20000.00, 'tarjeta'),
+-- (2, '2023-02-21', 22000.00, 'transferencia'),
+-- (3, '2023-03-26', 30000.00, 'efectivo');
 
-SELECT
-    u.id AS usuario_id,
-    u.nombre,
-    u.apaterno,
-    u.amaterno,
-    u.telefono,
-    u.correo,
-    u.usuario,
-    v.venta_id,
-    v.fecha_venta,
-    v.enganche,
-    c.carro_id,
-    c.marca,
-    c.modelo,
-    c.anio,
-    c.precio,
-    c.descripcion
-FROM
-    usuarios u
-JOIN
-    ventas v ON u.id = v.usuario_id
-JOIN
-    carros c ON v.carro_id = c.carro_id
-WHERE
-    u.usuario = 'juanp';  -- Reemplaza 'juanp' con el nombre de usuario específico que deseas consultar */
+-- SELECT
+--     u.id AS usuario_id,
+--     u.nombre,
+--     u.apaterno,
+--     u.amaterno,
+--     u.telefono,
+--     u.correo,
+--     u.usuario,
+--     v.venta_id,
+--     v.fecha_venta,
+--     v.enganche,
+--     c.carro_id,
+--     c.marca,
+--     c.modelo,
+--     c.anio,
+--     c.precio,
+--     c.descripcion
+-- FROM
+--     usuarios u
+-- JOIN
+--     ventas v ON u.id = v.usuario_id
+-- JOIN
+--     carros c ON v.carro_id = c.carro_id
+-- WHERE
+--     u.usuario = 'juanp';  -- Reemplaza 'juanp' con el nombre de usuario específico que deseas consultar */

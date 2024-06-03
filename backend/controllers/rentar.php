@@ -5,6 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Renta de Carro</title>
     <link rel="stylesheet" type="text/css" href="../../frontend/css/rentar.css">
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; /* Hace que el contenedor ocupe al menos el 100% de la altura de la ventana */
+        }
+
+        .btn-secondaryr {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 <div class="custom-navbar">
@@ -45,6 +65,7 @@
                     $monto_total = calcularMontoTotalRenta($precio_renta);
 
                     echo "<h1>Rentar $marca_modelo</h1>";
+                    echo "<img src='../../frontend/" . $row["imagen"] . "' class='car-image'>";
                     echo "<p>Precio de renta: $ $precio_renta por semana</p>";
                     echo "<p>Monto total estimado a pagar: $ $monto_total</p>";
                     echo "<p>Usuario: $usuario</p>";
@@ -60,7 +81,8 @@
                 echo "<p class='error'>Error al obtener el ID del usuario.</p>";
             }
         } else {
-            echo "<p class='error'>ID de carro no especificado o usuario no identificado.</p>";
+            echo "<p class='error'>Para comprar o rentar un carro, por favor inicie sesión.</p>";
+            echo "<a href='../../../Los-Patos-OMG-By-El-Angelo/frontend/login.php' class='btn-secondaryr'>Ir al login</a>";
         }
 
         function calcularMontoTotalRenta($precio) {
@@ -72,5 +94,6 @@
     <footer>
         &copy; 2024 Dinoco - Todos los derechos reservados.
     </footer>
+    
 </body>
 </html>

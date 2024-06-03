@@ -1,4 +1,6 @@
 <?php
+include '../backend/config/db.php'; // Incluir el archivo donde se define la conexión a la base de datos
+
 $sql = "SELECT * FROM carros";
 $result = $conn->query($sql);
 
@@ -11,8 +13,6 @@ echo '<title>Catálogo de Carros</title>';
 echo '<link rel="stylesheet" href="../frontend/css/mostrar_catalogo.css">'; // Enlace al archivo CSS
 echo '</head>';
 echo '<body>';
-
-echo '<h1 class="titulo">Catálogo de carros</h1>';
 
 echo '<div class="contenedor-carros">';
 
@@ -28,11 +28,11 @@ if ($result->num_rows > 0) {
 
         // Verificar la disponibilidad y deshabilitar los botones si no está disponible
         if ($row["disponibilidad"] == 1) {
-            echo "<p>Disponible: Sí</p>";
+            echo "<p class='alineado-izquierda'>Disponible: Sí</p>";
             echo "<button onclick='comprar(" . $row["carro_id"] . ")'>Comprar</button>";
             echo "<button onclick='rentar(" . $row["carro_id"] . ")'>Rentar</button>";
         } else {
-            echo "<p>Disponible: No</p>";
+            echo "<p class='alineado-izquierda'>Disponible: No</p>";
             echo "<button disabled>Comprar</button>";
             echo "<button disabled>Rentar</button>";
         }

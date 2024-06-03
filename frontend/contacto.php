@@ -33,8 +33,10 @@
                 <li><strong>Correo Electrónico:</strong> jefesin@dinoco.com</li>
             </ul>
         </div>
-        <p>Nuestro equipo, liderado por el Jefe del Área, estará encantado de atenderte y responder a todas tus preguntas. ¡Esperamos escucharte pronto!</p>
     </div>
+    <div class="cloud-container">
+    <p>Nuestro equipo, liderado por el Jefe del Área, estará encantado de atenderte y responder a todas tus preguntas. ¡Esperamos escucharte pronto!</p>
+</div>
 
     <footer>
         &copy; 2024 Dinoco - Todos los derechos reservados.
