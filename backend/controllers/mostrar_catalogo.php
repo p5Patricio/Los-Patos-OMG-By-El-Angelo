@@ -26,11 +26,11 @@ if ($result->num_rows > 0) {
 
         // Verificar la disponibilidad y deshabilitar los botones si no está disponible
         if ($row["disponibilidad"] == 1) {
-            echo "<p>Disponible: Sí</p>";
+            echo "<p class='alineado-izquierda'>Disponible: Sí</p>";
             echo "<button onclick='comprar(" . $row["carro_id"] . ")'>Comprar</button>";
             echo "<button onclick='rentar(" . $row["carro_id"] . ")'>Rentar</button>";
         } else {
-            echo "<p>Disponible: No</p>";
+            echo "<p class='alineado-izquierda'>Disponible: No</p>";
             echo "<button disabled>Comprar</button>";
             echo "<button disabled>Rentar</button>";
         }
