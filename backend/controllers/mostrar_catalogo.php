@@ -1,4 +1,6 @@
 <?php
+include '../backend/config/db.php'; // Incluir el archivo donde se define la conexión a la base de datos
+
 $sql = "SELECT * FROM carros";
 $result = $conn->query($sql);
 
