@@ -39,20 +39,14 @@ function actualizarDisponibilidadCarro($carro_id) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel de Administrador</title>
-    <!-- Agrega tus estilos aquí -->
 </head>
 <body>
     <h1>Panel de Administrador</h1>
-
-    <!-- Formulario para actualizar disponibilidad -->
     <h2>Actualizar Disponibilidad</h2>
     <form method="post">
         <label for="carro_id">ID de Carro:</label>
         <input type="text" name="carro_id" id="carro_id" required>
         <button type="submit" name="actualizar_disponibilidad">Actualizar Disponibilidad</button>
     </form>
-
-    <!-- Aquí puedes agregar más funcionalidad si lo deseas -->
-
 </body>
 </html>
