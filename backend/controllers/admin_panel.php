@@ -39,14 +39,18 @@ function actualizarDisponibilidadCarro($carro_id) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel de Administrador</title>
+    <link rel="stylesheet" type="text/css" href="../../frontend/css/admin.css">
 </head>
 <body>
-    <h1>Panel de Administrador</h1>
-    <h2>Actualizar Disponibilidad</h2>
-    <form method="post">
-        <label for="carro_id">ID de Carro:</label>
-        <input type="text" name="carro_id" id="carro_id" required>
-        <button type="submit" name="actualizar_disponibilidad">Actualizar Disponibilidad</button>
-    </form>
+    <div class="container">
+        <h1>Panel de Administrador</h1>
+        <h2>Actualizar Disponibilidad</h2>
+        <form method="post">
+            <label for="carro_id">ID de Carro:</label>
+            <input type="text" name="carro_id" id="carro_id" required>
+            <button type="submit" name="actualizar_disponibilidad">Actualizar</button>
+        </form>
+        <button onclick="window.location.href='../../frontend/index.php'" type="button">Home</button>
+    </div>
 </body>
 </html>
